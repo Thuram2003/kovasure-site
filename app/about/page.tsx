@@ -89,7 +89,7 @@ export default function AboutPage() {
               <div className="space-y-6">
                 <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Protecting Global Trade <br />
-                  <span className="text-[#0024ff]">Since 2015</span>
+                  <span className="text-[#0024ff]">Since 2020</span>
                 </h1>
                 <p className="text-lg text-gray-600 dark:text-gray-300 max-w-lg">
                   Cargo insurance built for logistics companies, freight forwarders, and importers who need cover that actually pays out.
@@ -286,46 +286,6 @@ export default function AboutPage() {
                   Technology entrepreneur and software systems designer based in Cameroon.
                 </p>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="py-16 px-6 md:px-8 bg-gray-950 text-white">
-          <div className="mx-auto max-w-3xl text-center space-y-5">
-            <h2 className="text-3xl md:text-4xl font-bold">
-              Ready to Work With Us?
-            </h2>
-            <p className="text-gray-400 max-w-xl mx-auto">
-              Whether you are moving one container or running a global fleet, we can build cover that fits.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 pt-2">
-              <Button variant="secondary" size="lg" href="/contact">
-                Get in Touch
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                href="/services"
-                className="border-white/20 text-white hover:bg-white hover:text-gray-950"
-              >
-                View Services <ArrowRight size={16} weight="bold" />
-              </Button>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 pt-6 text-sm text-gray-500">
-              <span className="flex items-center gap-1.5">
-                <Check size={14} weight="bold" className="text-[#ffb41d]" />
-                No-obligation quote
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Check size={14} weight="bold" className="text-[#ffb41d]" />
-                Bind in 5 minutes
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Check size={14} weight="bold" className="text-[#ffb41d]" />
-                A+ rated underwriters
-              </span>
             </div>
           </div>
         </section>

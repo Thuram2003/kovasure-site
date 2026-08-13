@@ -14,10 +14,6 @@ export default function PrivacyPage() {
 
           {/* Page Header */}
           <div className="space-y-4 mb-12 border-b border-gray-100 dark:border-white/5 pb-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0024ff]/15 rounded-full text-xs font-semibold text-[#0024ff] dark:text-blue-400">
-              <Shield size={16} weight="bold" />
-              <span>Legal Protection</span>
-            </div>
             <h1 className="text-4xl font-black tracking-tight sm:text-5xl">
               Privacy Statement
             </h1>

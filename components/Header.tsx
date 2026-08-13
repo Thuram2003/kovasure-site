@@ -17,15 +17,17 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      scrolled 
-        ? "bg-white/90 backdrop-blur-xl border-b border-[#0024ff]/10 shadow-[0_4px_30px_rgba(0,36,255,0.03)]" 
-        : "bg-white/60 backdrop-blur-lg border-b border-gray-100/50"
-    }`}>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <header
+      className={`fixed top-0 w-full z-50 border-b ${
+        scrolled
+          ? "bg-white dark:bg-[#030712] border-gray-200 dark:border-white/10 shadow-sm"
+          : "bg-white/80 dark:bg-[#030712]/80 border-transparent"
+      }`}
+    >
+      <div className="mx-auto max-w-7xl px-6 md:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2 group transition-transform hover:scale-102">
+          <a href="/" className="flex items-center gap-2">
             <Image
               src="/kovasure.svg"
               alt="Kovasure"
@@ -36,86 +38,72 @@ export default function Header() {
             />
           </a>
 
-          {/* Navigation Links */}
+          {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8">
             <a
               href="/services"
-              className="text-sm font-semibold text-gray-700 hover:text-[#0024ff] transition-colors py-2"
+              className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-[#0024ff] transition-colors"
             >
-              Our Services
+              Services
             </a>
-
-            <a
-              href="/blog"
-              className="text-sm font-semibold text-gray-700 hover:text-[#0024ff] transition-colors py-2"
-            >
-              Blog
-            </a>
-
             <a
               href="/about"
-              className="text-sm font-semibold text-gray-700 hover:text-[#0024ff] transition-colors py-2"
+              className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-[#0024ff] transition-colors"
             >
               About
             </a>
+            <a
+              href="/blog"
+              className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-[#0024ff] transition-colors"
+            >
+              Blog
+            </a>
           </nav>
 
-          {/* CTA Buttons */}
+          {/* CTA + Mobile Toggle */}
           <div className="flex items-center gap-3">
-            {/* Contact Button */}
             <a
               href="/contact"
-              className="hidden sm:inline-flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-[#0024ff] to-blue-700 text-white rounded-xl hover:shadow-[0_6px_20px_rgba(0,36,255,0.35)] transition-all duration-300 font-semibold text-sm hover:-translate-y-0.5 active:translate-y-0 active:scale-95 cursor-pointer"
+              className="hidden sm:inline-flex items-center px-5 py-2.5 bg-[#0024ff] text-white rounded-lg font-semibold text-sm hover:bg-blue-700 transition-colors"
             >
               Contact Us
             </a>
 
-            {/* Mobile Menu Toggle */}
             <button
               type="button"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden flex w-10 h-10 items-center justify-center text-gray-600 hover:text-gray-900 rounded-xl hover:bg-[#0024ff]/5 transition-colors cursor-pointer"
+              className="lg:hidden flex w-10 h-10 items-center justify-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-white/5"
               aria-label="Toggle menu"
             >
-              {isMenuOpen ? <X size={24} weight="bold" /> : <List size={24} weight="bold" />}
+              {isMenuOpen ? <X size={22} weight="bold" /> : <List size={22} weight="bold" />}
             </button>
           </div>
         </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-100 animate-fade-in max-h-[calc(100vh-4rem)] overflow-y-auto bg-white/95 backdrop-blur-xl">
-            <nav className="flex flex-col gap-2">
-              <a
-                href="/services"
-                onClick={() => setIsMenuOpen(false)}
-                className="flex items-center gap-2 px-4 py-3 text-sm font-bold text-gray-700 hover:text-[#0024ff] hover:bg-blue-50/50 rounded-xl transition-colors"
-              >
-                Our Services
-              </a>
+          <div className="lg:hidden py-4 border-t border-gray-100 dark:border-white/5 bg-white dark:bg-[#030712]">
+            <nav className="flex flex-col gap-1">
+              {[
+                { href: "/services", label: "Services" },
+                { href: "/about", label: "About" },
+                { href: "/blog", label: "Blog" },
+              ].map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-[#0024ff] hover:bg-gray-50 dark:hover:bg-white/5 rounded-lg transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
 
-              <a
-                href="/blog"
-                onClick={() => setIsMenuOpen(false)}
-                className="flex items-center gap-2 px-4 py-3 text-sm font-bold text-gray-700 hover:text-[#0024ff] hover:bg-blue-50/50 rounded-xl transition-colors"
-              >
-                Blog
-              </a>
-
-              <a
-                href="/about"
-                onClick={() => setIsMenuOpen(false)}
-                className="flex items-center gap-2 px-4 py-3 text-sm font-bold text-gray-700 hover:text-[#0024ff] hover:bg-blue-50/50 rounded-xl transition-colors"
-              >
-                About
-              </a>
-
-              {/* Mobile CTA */}
-              <div className="mt-4 px-2">
+              <div className="mt-3 px-4">
                 <a
                   href="/contact"
                   onClick={() => setIsMenuOpen(false)}
-                  className="flex items-center justify-center gap-2 px-6 py-3.5 bg-gradient-to-r from-[#0024ff] to-blue-700 text-white rounded-xl hover:shadow-lg transition-all font-semibold text-sm cursor-pointer"
+                  className="flex items-center justify-center px-5 py-3 bg-[#0024ff] text-white rounded-lg font-semibold text-sm hover:bg-blue-700 transition-colors"
                 >
                   Contact Us
                 </a>

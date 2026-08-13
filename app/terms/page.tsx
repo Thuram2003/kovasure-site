@@ -11,23 +11,9 @@ export default function TermsPage() {
 
       <main className="flex-grow pt-24 pb-20">
         <div className="max-w-4xl mx-auto px-6 sm:px-8">
-          {/* Back Link */}
-          <div className="mb-8">
-            <a
-              href="/"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-[#0024ff] dark:hover:text-blue-400 transition-colors"
-            >
-              <ArrowLeft size={16} weight="bold" />
-              Back to Home
-            </a>
-          </div>
 
           {/* Page Header */}
           <div className="space-y-4 mb-12 border-b border-gray-100 dark:border-white/5 pb-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0024ff]/15 rounded-full text-xs font-semibold text-[#0024ff] dark:text-blue-400">
-              <Scroll size={16} weight="bold" />
-              <span>Terms of Use</span>
-            </div>
             <h1 className="text-4xl font-black tracking-tight sm:text-5xl">
               Terms of Service
             </h1>

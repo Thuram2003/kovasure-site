@@ -36,7 +36,7 @@ const services = [
       "Container and bulk cargo",
       "Claims support at major ports",
     ],
-    image: "/ship.jpeg",
+    image: "/image1.jpg",
     id: "ocean"
   },
   {
@@ -49,7 +49,7 @@ const services = [
       "Aviation risk assessment",
       "24/7 claims line",
     ],
-    image: "/portview.jpg",
+    image: "/image3.jpg",
     id: "air"
   },
   {
@@ -88,7 +88,7 @@ const services = [
       "Single claims process",
       "Global network",
     ],
-    image: "/image1.jpg",
+    image: "/multimodal.jpg",
     id: "multimodal"
   },
   {
@@ -101,7 +101,7 @@ const services = [
       "Premium goods protection",
       "Risk consultants available",
     ],
-    image: "/image3.jpg",
+    image: "/risk.jpg",
     id: "allrisk"
   },
 ];
@@ -380,31 +380,6 @@ export default function ServicesPage() {
                   ))}
                 </ul>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Final CTA */}
-        <section className="py-16 px-6 md:px-8 bg-gray-950 text-white">
-          <div className="mx-auto max-w-3xl text-center space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold">
-              Get Your Quote Today
-            </h2>
-            <p className="text-gray-400 max-w-xl mx-auto">
-              Tell us your cargo value, origin, and destination. We will have a bindable quote back to you within the hour.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 pt-2">
-              <Button variant="secondary" size="lg" href="/contact">
-                Request a Quote
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                href="tel:+18001234567"
-                className="border-white/20 text-white hover:bg-white hover:text-gray-950"
-              >
-                Call Us
-              </Button>
             </div>
           </div>
         </section>
