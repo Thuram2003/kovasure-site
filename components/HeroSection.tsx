@@ -44,7 +44,7 @@ export default function HeroSection() {
                 <ArrowRight size={16} weight="bold" />
               </a>
               <a
-                href="#coverage"
+                href="/services#coverage"
                 className="inline-flex items-center gap-2 px-7 py-3.5 bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-800 dark:text-white rounded-lg font-semibold hover:border-[#0024ff] transition-colors"
               >
                 See Coverage

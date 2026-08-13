@@ -23,6 +23,13 @@ import {
   NumberCircleFour,
   Warning,
   X,
+  User,
+  GraduationCap,
+  ChartBar,
+  Globe,
+  DeviceMobile,
+  FileText,
+  MagnifyingGlass,
 } from "@phosphor-icons/react";
 
 const services = [
@@ -152,6 +159,80 @@ const steps = [
   },
 ];
 
+const brokerageItems = [
+  {
+    icon: FileText,
+    title: "Admitted Policy Process",
+    desc: "We manage issuing, billing, and claims on local policies for full visibility of your global program.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Risk of Loss & Incoterms",
+    desc: "Deep knowledge of international terms of sale ensures the right exposures are covered.",
+  },
+  {
+    icon: Coins,
+    title: "Subrogation",
+    desc: "We manage recovery on your behalf to maximize returns and keep premiums low.",
+  },
+  {
+    icon: MagnifyingGlass,
+    title: "Surveys",
+    desc: "Global network of surveyors for timely action that can make or break a claim.",
+  },
+];
+
+const claimsItems = [
+  {
+    icon: ChartBar,
+    title: "Reporting & Analytics",
+    desc: "See where losses occur and eliminate poor-performing carriers with actionable data.",
+  },
+  {
+    icon: DeviceMobile,
+    title: "TRACE® Web Portal",
+    desc: "Real-time visibility into certificates, claims, documents, and reporting web and mobile.",
+  },
+  {
+    icon: Globe,
+    title: "Surveyor Appointment",
+    desc: "We coordinate surveys with our global network, even in remote locations.",
+  },
+  {
+    icon: GraduationCap,
+    title: "Education & Consulting",
+    desc: "Dedicated professionals to train your team on claims process and cargo risk.",
+  },
+];
+
+const valueProps = [
+  {
+    icon: User,
+    title: "Single Point of Contact",
+    desc: "One person handles your policy, claims, and questions from start to finish.",
+  },
+  {
+    icon: GraduationCap,
+    title: "Logistics Experts",
+    desc: "Sole focus on cargo insurance means better coverage, pricing, and subrogation.",
+  },
+  {
+    icon: ChartBar,
+    title: "Reporting & Analytics",
+    desc: "Supply chain risk tools that surface insights and improve performance.",
+  },
+  {
+    icon: DeviceMobile,
+    title: "Accessibility & Technology",
+    desc: "Web portal and mobile app for claims filing anytime, anywhere.",
+  },
+  {
+    icon: Globe,
+    title: "Global Presence",
+    desc: "Best-in-class service backed by a worldwide network of industry experts.",
+  },
+];
+
 export default function ServicesPage() {
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-[#030712] text-gray-900 dark:text-white">
@@ -159,18 +240,35 @@ export default function ServicesPage() {
 
       <main className="flex-grow pt-16">
         {/* Hero */}
-        <section className="relative bg-slate-50 dark:bg-gray-950 py-20 md:py-28 border-b border-gray-100 dark:border-white/5">
-          <div className="mx-auto max-w-7xl px-6 md:px-8">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
-                <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  Cargo Insurance <br />
-                  <span className="text-[#0024ff]">Built for Global Trade</span>
+        <section className="relative overflow-hidden bg-white dark:bg-[#030712]">
+          <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full bg-slate-50 dark:bg-gray-900/30" />
+
+          <div className="relative max-w-7xl mx-auto px-6 md:px-8 py-20 lg:py-28">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <div className="relative z-10 max-w-xl">
+                <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-gray-900 dark:text-white leading-[1.1] mb-6">
+                  Insurance for <br />
+                  <span className="text-[#0024ff]">Every Shipment</span>
                 </h1>
-                <p className="text-lg text-gray-600 dark:text-gray-300 max-w-lg">
-                  From ocean freight to warehousing, we protect your supply chain so you can trade with confidence.
+
+                <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                  Ocean, air, land, and warehouse cover. One platform to quote, bind, and claim no brokers, no delays.
                 </p>
-                <div className="flex flex-wrap gap-4">
+
+                <ul className="space-y-2.5 mb-8">
+                  {[
+                    "All-risk and named-peril options",
+                    "Door-to-door multimodal cover",
+                    "A+ rated global underwriters",
+                  ].map((item) => (
+                    <li key={item} className="flex items-center gap-2.5 text-sm text-gray-600 dark:text-gray-300">
+                      <Check size={16} weight="bold" className="text-[#0024ff] flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="flex flex-wrap gap-4 mb-10">
                   <Button variant="primary" size="lg" href="#services">
                     Explore Services
                   </Button>
@@ -180,14 +278,25 @@ export default function ServicesPage() {
                 </div>
               </div>
 
-              <div className="relative">
-                <div className="relative h-[400px] w-full rounded-lg overflow-hidden shadow-lg">
+              <div className="relative h-[420px] md:h-[500px] lg:h-[540px]">
+                <div className="absolute top-8 right-0 w-[85%] h-[80%] bg-[#0024ff]/10 rounded-2xl" />
+
+                <div className="absolute top-0 left-0 w-[82%] h-[72%] rounded-xl overflow-hidden shadow-lg">
                   <Image
                     src="/shipment.jpg"
-                    alt="Cargo ship at port"
+                    alt="Cargo vessel at port"
                     fill
                     className="object-cover"
                     priority
+                  />
+                </div>
+
+                <div className="absolute bottom-0 right-0 w-[60%] h-[50%] rounded-xl overflow-hidden shadow-lg border-4 border-white dark:border-[#030712]">
+                  <Image
+                    src="/complaince.jpg"
+                    alt="Container terminal"
+                    fill
+                    className="object-cover"
                   />
                 </div>
               </div>
@@ -195,8 +304,8 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* Services */}
-        <section id="services" className="py-20 px-6 md:px-8">
+        {/* Services Grid */}
+        <section id="coverage" className="py-20 px-6 md:px-8">
           <div className="mx-auto max-w-7xl">
             <div className="text-center max-w-2xl mx-auto mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -254,6 +363,111 @@ export default function ServicesPage() {
                       >
                         Get Quote <ArrowRight size={14} weight="bold" />
                       </a>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Brokerage & Claims */}
+        <section className="py-20 px-6 md:px-8 bg-gray-50 dark:bg-gray-950 border-y border-gray-100 dark:border-white/5">
+          <div className="mx-auto max-w-7xl">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                Brokerage & Claims Management
+              </h2>
+              <p className="text-gray-600 dark:text-gray-400">
+                With deep roots in logistics, we handle the full lifecycle from policy placement to claim resolution.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-10">
+              {/* Brokerage */}
+              <div className="bg-white dark:bg-gray-900 rounded-lg border border-gray-100 dark:border-white/5 p-8">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
+                  Cargo Insurance Brokerage
+                </h3>
+                <div className="space-y-5">
+                  {brokerageItems.map((item, i) => {
+                    const Icon = item.icon;
+                    return (
+                      <div key={i} className="flex items-start gap-3">
+                        <div className="w-9 h-9 bg-[#0024ff]/10 rounded-lg flex items-center justify-center text-[#0024ff] flex-shrink-0 mt-0.5">
+                          <Icon size={18} weight="bold" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-0.5">
+                            {item.title}
+                          </h4>
+                          <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                            {item.desc}
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Claims */}
+              <div className="bg-white dark:bg-gray-900 rounded-lg border border-gray-100 dark:border-white/5 p-8">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
+                  Cargo Claims Management
+                </h3>
+                <div className="space-y-5">
+                  {claimsItems.map((item, i) => {
+                    const Icon = item.icon;
+                    return (
+                      <div key={i} className="flex items-start gap-3">
+                        <div className="w-9 h-9 bg-[#0024ff]/10 rounded-lg flex items-center justify-center text-[#0024ff] flex-shrink-0 mt-0.5">
+                          <Icon size={18} weight="bold" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-0.5">
+                            {item.title}
+                          </h4>
+                          <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                            {item.desc}
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Value Props */}
+        <section className="py-20 px-6 md:px-8">
+          <div className="mx-auto max-w-7xl">
+            <div className="text-center max-w-2xl mx-auto mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                Why Work With Us
+              </h2>
+              <p className="text-gray-600 dark:text-gray-400">
+                Five reasons shippers and forwarders choose Kovasure as their broker.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {valueProps.map((prop, i) => {
+                const Icon = prop.icon;
+                return (
+                  <div key={i} className="flex items-start gap-3">
+                    <div className="w-10 h-10 bg-[#0024ff]/10 rounded-lg flex items-center justify-center text-[#0024ff] flex-shrink-0">
+                      <Icon size={20} weight="bold" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1">
+                        {prop.title}
+                      </h4>
+                      <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                        {prop.desc}
+                      </p>
                     </div>
                   </div>
                 );

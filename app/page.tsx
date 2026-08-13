@@ -15,7 +15,6 @@ export default function Home() {
       
       <main role="main" className="overflow-x-hidden">
         <HeroSection />
-        <CoverageSection />
         <HowItWorksSection />
         <BenefitsSection />
         <DownloadSection />
