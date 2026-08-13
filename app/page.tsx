@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import CoverageSection from "@/components/CoverageSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import BenefitsSection from "@/components/BenefitsSection";
+import DownloadSection from "@/components/DownloadSection";
 import BlogSection from "@/components/BlogSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
@@ -17,6 +18,7 @@ export default function Home() {
         <CoverageSection />
         <HowItWorksSection />
         <BenefitsSection />
+        <DownloadSection />
         <BlogSection />
         <FAQSection />
       </main>
