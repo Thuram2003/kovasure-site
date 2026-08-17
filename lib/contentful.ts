@@ -38,7 +38,7 @@ export async function getBlogPosts(): Promise<any[]> {
   }
   try {
     const response = await contentfulClient.getEntries({
-      content_type: "kovasureBlogPost",
+      content_type: "kassongoBlogPost",
       order: ["-fields.date" as any], // Order by date descending
     });
     return response.items;
@@ -55,7 +55,7 @@ export async function getBlogPostBySlug(slug: string): Promise<any | null> {
   }
   try {
     const response = await contentfulClient.getEntries({
-      content_type: "kovasureBlogPost",
+      content_type: "kassongoBlogPost",
       "fields.slug": slug,
       limit: 1,
     });
