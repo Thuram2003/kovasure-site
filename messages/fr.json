@@ -1,0 +1,269 @@
+{
+  "Metadata": {
+    "title": "Kovasure - L'assurance fret simplifiée",
+    "description": "Protégez votre cargaison grâce à une couverture d'assurance complète. Rapide, fiable et adaptée à vos besoins d'expédition.",
+    "keywords": "logiciel chaîne d'approvisionnement, logiciel transit international, logiciel dédouanement, logiciel logistique mondiale, logiciel réservation fret, Ntigi, logiciel cargo, logiciel logistique"
+  },
+  "Header": {
+    "services": "Services",
+    "about": "À propos",
+    "blog": "Blog",
+    "getQuote": "Obtenir un devis",
+    "language": "Langue",
+    "toggleMenu": "Menu"
+  },
+  "Footer": {
+    "description": "Assurance cargo professionnelle pour le commerce mondial. Devis rapides, couverture complète, sinistres traités rapidement.",
+    "coverage": "Couverture",
+    "oceanFreight": "Assurance Fret Maritime",
+    "airCargo": "Assurance Cargo Aérien",
+    "landTransport": "Couverture Transport Terrestre",
+    "warehousing": "Protection Entrepôt",
+    "multimodal": "Couverture Multimodale",
+    "company": "Entreprise",
+    "about": "À propos de Kovasure",
+    "services": "Nos Services",
+    "blog": "Perspectives du Secteur",
+    "contact": "Nous Contacter",
+    "getInTouch": "Contactez-nous",
+    "support": "Support 24/7",
+    "email": "Email",
+    "office": "Bureau",
+    "rights": "Tous droits réservés.",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Conditions d'Utilisation",
+    "compliance": "Conformité Réglementaire"
+  },
+  "Services": {
+    "hero": {
+      "title1": "Une assurance pour",
+      "title2": "chaque expédition",
+      "subtitle": "Couverture maritime, aérienne, terrestre et entrepôt. Des polices claires, des sinistres simples et des experts qui comprennent la logistique.",
+      "bullet1": "Options tous risques et risques nommés",
+      "bullet2": "Couverture multimodale porte-à-porte",
+      "bullet3": "Assureurs mondiaux notés A+",
+      "bullet4": "Gestionnaires de sinistres dédiés",
+      "cta1": "Découvrir les services",
+      "cta2": "Parler à un expert"
+    },
+    "trust": {
+      "shipments": "Expéditions couvertes",
+      "claimsPaid": "Sinistres payés",
+      "settlement": "Règlement moyen des sinistres",
+      "underwriters": "Assureurs notés"
+    },
+    "people": {
+      "title": "Des personnes réelles. Des opérations concrètes.",
+      "subtitle": "Nous travaillons chaque jour avec des expéditeurs, transitaires et équipes d'entrepôt. Nos gestionnaires de sinistres et souscripteurs comprennent la pression de livrer à temps et dans le budget.",
+      "bullet1": "Gestionnaires de compte dédiés",
+      "bullet2": "Réseau d'experts sur le terrain",
+      "bullet3": "Équipes de sinistres qui répondent au téléphone",
+      "bullet4": "Conseils pratiques, pas seulement des polices"
+    },
+    "coverage": {
+      "title": "Nos solutions d'assurance",
+      "subtitle": "Une couverture simple pour chaque type de cargaison et mode de transport."
+    },
+    "services": {
+      "ocean": {
+        "title": "Assurance fret maritime",
+        "description": "Couverture des marchandises transportées par mer. Protection contre la perte, les dommages, le vol et les événements météorologiques.",
+        "f1": "Options tous risques et risques nommés",
+        "f2": "Couverture piraterie et accidents de navire",
+        "f3": "Conteneurs et vrac",
+        "f4": "Support sinistres dans les grands ports"
+      },
+      "air": {
+        "title": "Assurance fret aérien",
+        "description": "Couverture rapide pour le cargo aérien de haute valeur avec un règlement de sinistres accéléré.",
+        "f1": "Protection cargo express",
+        "f2": "Couverture marchandises de haute valeur",
+        "f3": "Évaluation des risques aviation",
+        "f4": "Ligne sinistres 24/7"
+      },
+      "land": {
+        "title": "Assurance transport terrestre",
+        "description": "Couverture route et rail contre les accidents, le vol et les retards.",
+        "f1": "Couverture multimodale",
+        "f2": "Protection camions et rail",
+        "f3": "Indemnisation des retards",
+        "f4": "Transfrontalier inclus"
+      },
+      "warehouse": {
+        "title": "Assurance entreposage",
+        "description": "Couverture des marchandises en stock contre l'incendie, le vol et les dommages.",
+        "f1": "Couverture incendie et catastrophes naturelles",
+        "f2": "Protection contre le vol et le vandalisme",
+        "f3": "Options entrepôt frigorifique",
+        "f4": "Support inventaire"
+      },
+      "multimodal": {
+        "title": "Assurance multimodale",
+        "description": "Une seule police de l'origine à la destination, mer, air et terre.",
+        "f1": "Couverture porte-à-porte",
+        "f2": "Protection transport intégrée",
+        "f3": "Processus de sinistre unique",
+        "f4": "Réseau mondial"
+      },
+      "allrisk": {
+        "title": "Assurance cargo tous risques",
+        "description": "Couverture large contre presque tous les risques de perte ou de dommages physiques.",
+        "f1": "Couverture de risques complète",
+        "f2": "Exclusions minimales",
+        "f3": "Protection marchandises premium",
+        "f4": "Consultants en risques disponibles"
+      }
+    },
+    "getQuote": "Obtenir un devis",
+    "brokerageClaims": {
+      "title": "Courtage & Gestion des sinistres",
+      "subtitle": "Nous gérons le cycle complet, de la souscription de la police au règlement du sinistre."
+    },
+    "brokerage": {
+      "title": "Courtage d'assurance cargo",
+      "admitted": {
+        "title": "Processus de police admise",
+        "desc": "Nous gérons l'émission, la facturation et les sinistres des polices locales pour une visibilité totale de votre programme mondial."
+      },
+      "risk": {
+        "title": "Risque de perte & Incoterms",
+        "desc": "Une connaissance approfondie des conditions de vente internationales garantit la couverture des bons risques."
+      },
+      "subrogation": {
+        "title": "Subrogation",
+        "desc": "Nous gérons le recouvrement en votre nom pour maximiser les retours et maintenir les primes basses."
+      },
+      "surveys": {
+        "title": "Expertises",
+        "desc": "Réseau mondial d'experts pour une action rapide qui peut faire ou défaire un sinistre."
+      }
+    },
+    "claims": {
+      "title": "Gestion des sinistres cargo",
+      "reporting": {
+        "title": "Reporting & Analytique",
+        "desc": "Identifiez où surviennent les pertes et éliminez les transporteurs peu performants grâce à des données actionnables."
+      },
+      "portal": {
+        "title": "Portail web TRACE®",
+        "desc": "Visibilité en temps réel sur les certificats, sinistres, documents et reporting — web et mobile."
+      },
+      "surveyor": {
+        "title": "Nomination d'expert",
+        "desc": "Nous coordonnons les expertises avec notre réseau mondial, même dans les lieux isolés."
+      },
+      "education": {
+        "title": "Formation & Conseil",
+        "desc": "Des professionnels dédiés pour former votre équipe au processus de sinistre et aux risques cargo."
+      }
+    },
+    "why": {
+      "title": "Pourquoi les expéditeurs travaillent avec nous",
+      "subtitle": "Une communication claire, une expertise pratique et une équipe qui comprend les réalités du transport de marchandises."
+    },
+    "valueProps": {
+      "contact": {
+        "title": "Interlocuteur unique",
+        "desc": "Une seule personne gère votre police, vos sinistres et vos questions du début à la fin."
+      },
+      "experts": {
+        "title": "Experts en logistique",
+        "desc": "Une concentration exclusive sur l'assurance cargo signifie une meilleure couverture, des tarifs et une subrogation optimisés."
+      },
+      "analytics": {
+        "title": "Reporting & Analytique",
+        "desc": "Des outils de risque supply chain qui font émerger des insights et améliorent les performances."
+      },
+      "tech": {
+        "title": "Accessibilité & Technologie",
+        "desc": "Portail web et application mobile pour déclarer un sinistre à tout moment, où que vous soyez."
+      },
+      "global": {
+        "title": "Présence mondiale",
+        "desc": "Un service de premier ordre soutenu par un réseau mondial d'experts du secteur."
+      }
+    },
+    "benefitsBand": {
+      "title": "Une protection concrète pour de vraies expéditions",
+      "subtitle": "Une souscription solide, une communication claire et des interlocuteurs qui répondent quand vous en avez besoin.",
+      "cta": "Se protéger maintenant"
+    },
+    "benefits": {
+      "maxProtection": {
+        "title": "Protection maximale",
+        "description": "Des polices qui couvrent votre fret du chargement à la livraison."
+      },
+      "competitiveRates": {
+        "title": "Tarifs compétitifs",
+        "description": "Des primes adaptées à vos routes et types de cargaison."
+      },
+      "claims48h": {
+        "title": "Sinistres en 48 h",
+        "description": "Support digital des sinistres pour que votre activité continue."
+      },
+      "instantPolicies": {
+        "title": "Polices instantanées",
+        "description": "Obtenez un devis et souscrivez en moins de 5 minutes."
+      }
+    },
+    "howItWorks": {
+      "title": "Comment fonctionne l'assurance cargo",
+      "subtitle": "Quatre étapes claires. Sans paperasse inutile."
+    },
+    "steps": {
+      "quote": {
+        "title": "Obtenir un devis",
+        "desc": "Indiquez la valeur de la cargaison, l'itinéraire et le mode. Recevez un devis engageant en quelques minutes."
+      },
+      "bind": {
+        "title": "Souscrire votre police",
+        "desc": "Examinez les conditions, payez la prime et recevez votre certificat d'assurance instantanément."
+      },
+      "ship": {
+        "title": "Expédiez en toute confiance",
+        "desc": "Vos marchandises sont couvertes de l'enlèvement à la livraison finale, partout dans le monde."
+      },
+      "claim": {
+        "title": "Déclarer un sinistre si besoin",
+        "desc": "Déclarez en ligne 24/7. La plupart des sinistres sont réglés sous 48 heures après réception des documents."
+      }
+    },
+    "comparison": {
+      "title": "Assurance cargo vs. responsabilité du transporteur",
+      "subtitle": "Beaucoup d'expéditeurs pensent que la responsabilité du transporteur suffit. Dans la plupart des cas, ce n'est pas le cas.",
+      "cargo": {
+        "title": "Assurance cargo",
+        "item1": "Couvre la valeur déclarée totale des marchandises",
+        "item2": "Protège contre le vol, l'incendie et les cas de force majeure",
+        "item3": "Couvre les dommages dus à une mauvaise manutention",
+        "item4": "Indemnise même si le transporteur n'est pas en faute",
+        "item5": "Couverture mondiale, tous modes de transport"
+      },
+      "carrier": {
+        "title": "Responsabilité transporteur uniquement",
+        "item1": "Limitée à 500 $ par colis (COGSA)",
+        "item2": "Exclut les cas de force majeure et le vice propre",
+        "item3": "Le transporteur doit être prouvé négligent",
+        "item4": "Pas de couverture pour les dommages cachés",
+        "item5": "Varie fortement selon les juridictions"
+      }
+    },
+    "finalCta": {
+      "title": "Prêt à protéger votre prochaine expédition ?",
+      "subtitle": "Parlez à un spécialiste de l'assurance cargo. Sans pression — seulement des réponses claires sur ce dont vous avez réellement besoin.",
+      "cta1": "Parler à un expert",
+      "cta2": "Voir tous les services"
+    },
+    "images": {
+      "shipment": "Navire cargo en chargement au port",
+      "trucks": "Camions à l'entrepôt",
+      "warehouse": "Opérations d'entrepôt",
+      "team": "Équipe d'assurance discutant d'un sinistre",
+      "staff": "Personnel d'entrepôt contrôlant la cargaison",
+      "port": "Opérations portuaires et manutention de conteneurs",
+      "claimsTeam": "Équipe sinistres examinant des documents",
+      "surveyor": "Expert inspectant la cargaison",
+      "specialist": "Discussion avec un spécialiste de l'assurance cargo"
+    }
+  }
+}

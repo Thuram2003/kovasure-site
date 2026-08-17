@@ -1,0 +1,269 @@
+{
+  "Metadata": {
+    "title": "Kovasure - Cargo Insurance Simplified",
+    "description": "Protect your cargo with comprehensive insurance coverage. Fast, reliable, and tailored to your shipping needs.",
+    "keywords": "supply chain software, Freight forwarding software, customs clearance software, global logistics software, Freight booking software, Ntigi, cargo software, logistics software"
+  },
+  "Header": {
+    "services": "Services",
+    "about": "About",
+    "blog": "Blog",
+    "getQuote": "Get Quote",
+    "language": "Language",
+    "toggleMenu": "Toggle menu"
+  },
+   "Footer": {
+    "description": "Professional cargo insurance for global trade. Fast quotes, comprehensive coverage, rapid claims.",
+    "coverage": "Coverage",
+    "oceanFreight": "Ocean Freight Insurance",
+    "airCargo": "Air Cargo Insurance",
+    "landTransport": "Land Transport Coverage",
+    "warehousing": "Warehousing Protection",
+    "multimodal": "Multimodal Coverage",
+    "company": "Company",
+    "about": "About Kovasure",
+    "services": "Our Services",
+    "blog": "Industry Insights",
+    "contact": "Contact Us",
+    "getInTouch": "Get in Touch",
+    "support": "24/7 Support",
+    "email": "Email",
+    "office": "Office",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "compliance": "Regulatory Compliance"
+  },
+  "Services": {
+    "hero": {
+      "title1": "Insurance for",
+      "title2": "Every Shipment",
+      "subtitle": "Ocean, air, land, and warehouse cover. Clear policies, straightforward claims, and people who understand logistics.",
+      "bullet1": "All-risk and named-peril options",
+      "bullet2": "Door-to-door multimodal cover",
+      "bullet3": "A+ rated global underwriters",
+      "bullet4": "Dedicated claims handlers",
+      "cta1": "Explore Services",
+      "cta2": "Speak with an Expert"
+    },
+    "trust": {
+      "shipments": "Shipments Covered",
+      "claimsPaid": "Claims Paid",
+      "settlement": "Average Claims Settlement",
+      "underwriters": "Rated Underwriters"
+    },
+    "people": {
+      "title": "Real people. Real operations.",
+      "subtitle": "We work every day with shippers, forwarders, and warehouse teams. Our claims handlers and underwriters understand the pressure of moving cargo on time and on budget.",
+      "bullet1": "Dedicated account managers",
+      "bullet2": "On-the-ground survey network",
+      "bullet3": "Claims teams that pick up the phone",
+      "bullet4": "Practical advice, not just policies"
+    },
+    "coverage": {
+      "title": "Our Insurance Solutions",
+      "subtitle": "Straightforward cover for every cargo type and transport method."
+    },
+    "services": {
+      "ocean": {
+        "title": "Ocean Freight Insurance",
+        "description": "Cover for goods shipped by sea. Protects against loss, damage, theft, and weather events.",
+        "f1": "All-risk and named-peril options",
+        "f2": "Piracy and vessel accident cover",
+        "f3": "Container and bulk cargo",
+        "f4": "Claims support at major ports"
+      },
+      "air": {
+        "title": "Air Freight Insurance",
+        "description": "Fast cover for high-value air cargo with quick claims turnaround.",
+        "f1": "Express cargo protection",
+        "f2": "High-value goods cover",
+        "f3": "Aviation risk assessment",
+        "f4": "24/7 claims line"
+      },
+      "land": {
+        "title": "Land Transport Insurance",
+        "description": "Road and rail cover against accidents, theft, and delays.",
+        "f1": "Multi-modal cover",
+        "f2": "Truck and rail protection",
+        "f3": "Delay compensation",
+        "f4": "Cross-border included"
+      },
+      "warehouse": {
+        "title": "Warehousing Insurance",
+        "description": "Cover for goods in storage against fire, theft, and damage.",
+        "f1": "Fire and natural disaster cover",
+        "f2": "Theft and vandalism protection",
+        "f3": "Cold storage options",
+        "f4": "Inventory support"
+      },
+      "multimodal": {
+        "title": "Multimodal Insurance",
+        "description": "One policy from origin to destination across sea, air, and land.",
+        "f1": "Door-to-door cover",
+        "f2": "Integrated transport protection",
+        "f3": "Single claims process",
+        "f4": "Global network"
+      },
+      "allrisk": {
+        "title": "All-Risk Cargo Insurance",
+        "description": "Broad cover against almost all physical loss or damage risks.",
+        "f1": "Comprehensive risk cover",
+        "f2": "Minimal exclusions",
+        "f3": "Premium goods protection",
+        "f4": "Risk consultants available"
+      }
+    },
+    "getQuote": "Get a Quote",
+    "brokerageClaims": {
+      "title": "Brokerage & Claims Management",
+      "subtitle": "We handle the full lifecycle from placing the policy to resolving the claim."
+    },
+    "brokerage": {
+      "title": "Cargo Insurance Brokerage",
+      "admitted": {
+        "title": "Admitted Policy Process",
+        "desc": "We manage issuing, billing, and claims on local policies for full visibility of your global program."
+      },
+      "risk": {
+        "title": "Risk of Loss & Incoterms",
+        "desc": "Deep knowledge of international terms of sale ensures the right exposures are covered."
+      },
+      "subrogation": {
+        "title": "Subrogation",
+        "desc": "We manage recovery on your behalf to maximize returns and keep premiums low."
+      },
+      "surveys": {
+        "title": "Surveys",
+        "desc": "Global network of surveyors for timely action that can make or break a claim."
+      }
+    },
+    "claims": {
+      "title": "Cargo Claims Management",
+      "reporting": {
+        "title": "Reporting & Analytics",
+        "desc": "See where losses occur and eliminate poor-performing carriers with actionable data."
+      },
+      "portal": {
+        "title": "TRACE® Web Portal",
+        "desc": "Real-time visibility into certificates, claims, documents, and reporting — web and mobile."
+      },
+      "surveyor": {
+        "title": "Surveyor Appointment",
+        "desc": "We coordinate surveys with our global network, even in remote locations."
+      },
+      "education": {
+        "title": "Education & Consulting",
+        "desc": "Dedicated professionals to train your team on claims process and cargo risk."
+      }
+    },
+    "why": {
+      "title": "Why Shippers Work With Us",
+      "subtitle": "Clear communication, practical expertise, and a team that understands the realities of moving cargo."
+    },
+    "valueProps": {
+      "contact": {
+        "title": "Single Point of Contact",
+        "desc": "One person handles your policy, claims, and questions from start to finish."
+      },
+      "experts": {
+        "title": "Logistics Experts",
+        "desc": "Sole focus on cargo insurance means better coverage, pricing, and subrogation."
+      },
+      "analytics": {
+        "title": "Reporting & Analytics",
+        "desc": "Supply chain risk tools that surface insights and improve performance."
+      },
+      "tech": {
+        "title": "Accessibility & Technology",
+        "desc": "Web portal and mobile app for claims filing anytime, anywhere."
+      },
+      "global": {
+        "title": "Global Presence",
+        "desc": "Best-in-class service backed by a worldwide network of industry experts."
+      }
+    },
+    "benefitsBand": {
+      "title": "Practical Protection for Real Shipments",
+      "subtitle": "Solid underwriting, clear communication, and people who respond when you need them.",
+      "cta": "Get Protected Now"
+    },
+    "benefits": {
+      "maxProtection": {
+        "title": "Maximum Protection",
+        "description": "Policies that cover your freight from loading to delivery."
+      },
+      "competitiveRates": {
+        "title": "Competitive Rates",
+        "description": "Premiums tailored to your routes and cargo types."
+      },
+      "claims48h": {
+        "title": "48-Hour Claims",
+        "description": "Digital claims support so your business keeps moving."
+      },
+      "instantPolicies": {
+        "title": "Instant Policies",
+        "description": "Get quotes and bind cover in under 5 minutes."
+      }
+    },
+    "howItWorks": {
+      "title": "How Cargo Insurance Works",
+      "subtitle": "Four clear steps. No unnecessary paperwork."
+    },
+    "steps": {
+      "quote": {
+        "title": "Get a Quote",
+        "desc": "Enter cargo value, route, and mode. Receive a bindable quote in minutes."
+      },
+      "bind": {
+        "title": "Bind Your Policy",
+        "desc": "Review terms, pay premium, and receive your certificate of insurance instantly."
+      },
+      "ship": {
+        "title": "Ship with Confidence",
+        "desc": "Your goods are covered from pickup to final delivery, anywhere in the world."
+      },
+      "claim": {
+        "title": "Claim if Needed",
+        "desc": "File online 24/7. Most claims settled within 48 hours of documentation."
+      }
+    },
+    "comparison": {
+      "title": "Cargo Insurance vs. Carrier Liability",
+      "subtitle": "Many shippers assume the carrier’s liability is enough. In most cases it is not.",
+      "cargo": {
+        "title": "Cargo Insurance",
+        "item1": "Covers full declared value of goods",
+        "item2": "Protects against theft, fire, and Acts of God",
+        "item3": "Covers damage from improper handling",
+        "item4": "Pays even if carrier is not at fault",
+        "item5": "Worldwide coverage, any transport mode"
+      },
+      "carrier": {
+        "title": "Carrier Liability Only",
+        "item1": "Limited to $500 per package (COGSA)",
+        "item2": "Excludes Acts of God and inherent vice",
+        "item3": "Carrier must be proven negligent",
+        "item4": "No cover for concealed damage",
+        "item5": "Varies widely by jurisdiction"
+      }
+    },
+    "finalCta": {
+      "title": "Ready to protect your next shipment?",
+      "subtitle": "Talk to a cargo insurance specialist. No pressure — just clear answers about what you actually need.",
+      "cta1": "Speak with an Expert",
+      "cta2": "View All Services"
+    },
+    "images": {
+      "shipment": "Cargo vessel loading at port",
+      "trucks": "Trucks at warehouse",
+      "warehouse": "Warehouse operations",
+      "team": "Insurance team discussing a claim",
+      "staff": "Warehouse staff checking cargo",
+      "port": "Port operations and container handling",
+      "claimsTeam": "Claims team reviewing documents",
+      "surveyor": "Surveyor inspecting cargo",
+      "specialist": "Speaking with a cargo insurance specialist"
+    }
+  }
+}

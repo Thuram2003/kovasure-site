@@ -2,8 +2,11 @@
 
 import { EnvelopeSimple, FacebookLogo, XLogo, LinkedinLogo, Phone, MapPin } from "@phosphor-icons/react";
 import Image from "next/image";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations("Footer");
   const currentYear = new Date().getFullYear();
 
   return (
@@ -12,7 +15,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <a href="/">
+            <Link href="/">
               <Image
                 src="/kovasure.svg"
                 alt="Kovasure"
@@ -20,9 +23,9 @@ export default function Footer() {
                 height={38}
                 className="h-10 w-auto"
               />
-            </a>
+            </Link>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Professional cargo insurance for global trade. Fast quotes, comprehensive coverage, rapid claims.
+              {t("description")}
             </p>
             <div className="flex gap-2">
               {[FacebookLogo, XLogo, LinkedinLogo].map((Icon, i) => (
@@ -37,52 +40,98 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Coverage / Services */}
           <div>
-            <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-wider border-b border-white/10 pb-3">Coverage</h4>
+            <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-wider border-b border-white/10 pb-3">
+              {t("coverage")}
+            </h4>
             <ul className="space-y-3 text-sm text-gray-400">
-              <li><a href="/services#ocean" className="hover:text-white transition-colors">Ocean Freight Insurance</a></li>
-              <li><a href="/services#air" className="hover:text-white transition-colors">Air Cargo Insurance</a></li>
-              <li><a href="/services#land" className="hover:text-white transition-colors">Land Transport Coverage</a></li>
-              <li><a href="/services#warehouse" className="hover:text-white transition-colors">Warehousing Protection</a></li>
-              <li><a href="/services#multimodal" className="hover:text-white transition-colors">Multimodal Coverage</a></li>
+              <li>
+                <Link href="/services#ocean" className="hover:text-white transition-colors">
+                  {t("oceanFreight")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/services#air" className="hover:text-white transition-colors">
+                  {t("airCargo")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/services#land" className="hover:text-white transition-colors">
+                  {t("landTransport")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/services#warehouse" className="hover:text-white transition-colors">
+                  {t("warehousing")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/services#multimodal" className="hover:text-white transition-colors">
+                  {t("multimodal")}
+                </Link>
+              </li>
             </ul>
           </div>
 
           {/* Company */}
           <div>
-            <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-wider border-b border-white/10 pb-3">Company</h4>
+            <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-wider border-b border-white/10 pb-3">
+              {t("company")}
+            </h4>
             <ul className="space-y-3 text-sm text-gray-400">
-              <li><a href="/about" className="hover:text-white transition-colors">About Kovasure</a></li>
-              <li><a href="/services" className="hover:text-white transition-colors">Our Services</a></li>
-              <li><a href="/blog" className="hover:text-white transition-colors">Industry Insights</a></li>
-              <li><a href="/contact" className="hover:text-white transition-colors">Contact Us</a></li>
+              <li>
+                <Link href="/about" className="hover:text-white transition-colors">
+                  {t("about")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="hover:text-white transition-colors">
+                  {t("services")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="hover:text-white transition-colors">
+                  {t("blog")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-white transition-colors">
+                  {t("contact")}
+                </Link>
+              </li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-wider border-b border-white/10 pb-3">Get in Touch</h4>
+            <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-wider border-b border-white/10 pb-3">
+              {t("getInTouch")}
+            </h4>
             <div className="space-y-3 text-sm text-gray-400">
               <div className="flex items-start gap-3">
                 <Phone size={18} weight="bold" className="text-[#0024ff] mt-0.5 flex-shrink-0" />
                 <div>
-                  <div className="text-white font-semibold mb-1">24/7 Support</div>
-                  <a href="tel:+1234567890" className="hover:text-white transition-colors">+1 (234) 567-890</a>
+                  <div className="text-white font-semibold mb-1">{t("support")}</div>
+                  <a href="tel:+237677777777" className="hover:text-white transition-colors">
+                    +237 6 77 77 77 77
+                  </a>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <EnvelopeSimple size={18} weight="bold" className="text-[#0024ff] mt-0.5 flex-shrink-0" />
                 <div>
-                  <div className="text-white font-semibold mb-1">Email</div>
-                  <a href="mailto:info@kovasure.com" className="hover:text-white transition-colors">info@kovasure.com</a>
+                  <div className="text-white font-semibold mb-1">{t("email")}</div>
+                  <a href="mailto:info@kovasure.com" className="hover:text-white transition-colors">
+                    info@kovasure.com
+                  </a>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <MapPin size={18} weight="bold" className="text-[#0024ff] mt-0.5 flex-shrink-0" />
                 <div>
-                  <div className="text-white font-semibold mb-1">Office</div>
-                  <span>Global Insurance Hub</span>
+                  <div className="text-white font-semibold mb-1">{t("office")}</div>
+                  <span>G4 Etage, Bonaberi, Douala, Cameroon</span>
                 </div>
               </div>
             </div>
@@ -92,11 +141,19 @@ export default function Footer() {
         {/* Bottom */}
         <div className="pt-8 border-t border-white/10">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-            <p>© {currentYear} Kovasure. All rights reserved.</p>
+            <p>
+              © {currentYear} Kovasure. {t("rights")}
+            </p>
             <div className="flex gap-6">
-              <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
-              <a href="/about#compliance" className="hover:text-white transition-colors">Regulatory Compliance</a>
+              <Link href="/privacy" className="hover:text-white transition-colors">
+                {t("privacy")}
+              </Link>
+              <Link href="/terms" className="hover:text-white transition-colors">
+                {t("terms")}
+              </Link>
+              <Link href="/about#compliance" className="hover:text-white transition-colors">
+                {t("compliance")}
+              </Link>
             </div>
           </div>
         </div>

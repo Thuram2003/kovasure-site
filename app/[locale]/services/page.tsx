@@ -4,6 +4,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import {
   Boat,
   Airplane,
@@ -34,215 +36,247 @@ import {
   Handshake,
 } from "@phosphor-icons/react";
 
-const services = [
-  {
-    icon: Boat,
-    title: "Ocean Freight Insurance",
-    description: "Cover for goods shipped by sea. Protects against loss, damage, theft, and weather events.",
-    features: [
-      "All-risk and named-peril options",
-      "Piracy and vessel accident cover",
-      "Container and bulk cargo",
-      "Claims support at major ports",
-    ],
-    image: "/image1.jpg",
-    id: "ocean",
-  },
-  {
-    icon: Airplane,
-    title: "Air Freight Insurance",
-    description: "Fast cover for high-value air cargo with quick claims turnaround.",
-    features: [
-      "Express cargo protection",
-      "High-value goods cover",
-      "Aviation risk assessment",
-      "24/7 claims line",
-    ],
-    image: "/image3.jpg",
-    id: "air",
-  },
-  {
-    icon: Truck,
-    title: "Land Transport Insurance",
-    description: "Road and rail cover against accidents, theft, and delays.",
-    features: [
-      "Multi-modal cover",
-      "Truck and rail protection",
-      "Delay compensation",
-      "Cross-border included",
-    ],
-    image: "/trucks.jpg",
-    id: "land",
-  },
-  {
-    icon: Warehouse,
-    title: "Warehousing Insurance",
-    description: "Cover for goods in storage against fire, theft, and damage.",
-    features: [
-      "Fire and natural disaster cover",
-      "Theft and vandalism protection",
-      "Cold storage options",
-      "Inventory support",
-    ],
-    image: "/image2.jpg",
-    id: "warehouse",
-  },
-  {
-    icon: Package,
-    title: "Multimodal Insurance",
-    description: "One policy from origin to destination across sea, air, and land.",
-    features: [
-      "Door-to-door cover",
-      "Integrated transport protection",
-      "Single claims process",
-      "Global network",
-    ],
-    image: "/multimodal.jpg",
-    id: "multimodal",
-  },
-  {
-    icon: ShieldCheck,
-    title: "All-Risk Cargo Insurance",
-    description: "Broad cover against almost all physical loss or damage risks.",
-    features: [
-      "Comprehensive risk cover",
-      "Minimal exclusions",
-      "Premium goods protection",
-      "Risk consultants available",
-    ],
-    image: "/risk.jpg",
-    id: "allrisk",
-  },
-];
-
-const benefits = [
-  {
-    icon: Shield,
-    title: "Maximum Protection",
-    description: "Policies that cover your freight from loading to delivery.",
-  },
-  {
-    icon: Coins,
-    title: "Competitive Rates",
-    description: "Premiums tailored to your routes and cargo types.",
-  },
-  {
-    icon: Clock,
-    title: "48-Hour Claims",
-    description: "Digital claims support so your business keeps moving.",
-  },
-  {
-    icon: Files,
-    title: "Instant Policies",
-    description: "Get quotes and bind cover in under 5 minutes.",
-  },
-];
-
-const steps = [
-  {
-    num: NumberCircleOne,
-    title: "Get a Quote",
-    desc: "Enter cargo value, route, and mode. Receive a bindable quote in minutes.",
-  },
-  {
-    num: NumberCircleTwo,
-    title: "Bind Your Policy",
-    desc: "Review terms, pay premium, and receive your certificate of insurance instantly.",
-  },
-  {
-    num: NumberCircleThree,
-    title: "Ship with Confidence",
-    desc: "Your goods are covered from pickup to final delivery, anywhere in the world.",
-  },
-  {
-    num: NumberCircleFour,
-    title: "Claim if Needed",
-    desc: "File online 24/7. Most claims settled within 48 hours of documentation.",
-  },
-];
-
-const brokerageItems = [
-  {
-    icon: FileText,
-    title: "Admitted Policy Process",
-    desc: "We manage issuing, billing, and claims on local policies for full visibility of your global program.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Risk of Loss & Incoterms",
-    desc: "Deep knowledge of international terms of sale ensures the right exposures are covered.",
-  },
-  {
-    icon: Coins,
-    title: "Subrogation",
-    desc: "We manage recovery on your behalf to maximize returns and keep premiums low.",
-  },
-  {
-    icon: MagnifyingGlass,
-    title: "Surveys",
-    desc: "Global network of surveyors for timely action that can make or break a claim.",
-  },
-];
-
-const claimsItems = [
-  {
-    icon: ChartBar,
-    title: "Reporting & Analytics",
-    desc: "See where losses occur and eliminate poor-performing carriers with actionable data.",
-  },
-  {
-    icon: DeviceMobile,
-    title: "TRACE® Web Portal",
-    desc: "Real-time visibility into certificates, claims, documents, and reporting — web and mobile.",
-  },
-  {
-    icon: Globe,
-    title: "Surveyor Appointment",
-    desc: "We coordinate surveys with our global network, even in remote locations.",
-  },
-  {
-    icon: GraduationCap,
-    title: "Education & Consulting",
-    desc: "Dedicated professionals to train your team on claims process and cargo risk.",
-  },
-];
-
-const valueProps = [
-  {
-    icon: User,
-    title: "Single Point of Contact",
-    desc: "One person handles your policy, claims, and questions from start to finish.",
-  },
-  {
-    icon: GraduationCap,
-    title: "Logistics Experts",
-    desc: "Sole focus on cargo insurance means better coverage, pricing, and subrogation.",
-  },
-  {
-    icon: ChartBar,
-    title: "Reporting & Analytics",
-    desc: "Supply chain risk tools that surface insights and improve performance.",
-  },
-  {
-    icon: DeviceMobile,
-    title: "Accessibility & Technology",
-    desc: "Web portal and mobile app for claims filing anytime, anywhere.",
-  },
-  {
-    icon: Globe,
-    title: "Global Presence",
-    desc: "Best-in-class service backed by a worldwide network of industry experts.",
-  },
-];
-
-const trustStats = [
-  { value: "12,000+", label: "Shipments Covered" },
-  { value: "98%", label: "Claims Paid" },
-  { value: "48 hrs", label: "Average Claims Settlement" },
-  { value: "A+", label: "Rated Underwriters" },
-];
-
 export default function ServicesPage() {
+  const t = useTranslations("Services");
+
+  const services = [
+    {
+      icon: Boat,
+      title: t("services.ocean.title"),
+      description: t("services.ocean.description"),
+      features: [
+        t("services.ocean.f1"),
+        t("services.ocean.f2"),
+        t("services.ocean.f3"),
+        t("services.ocean.f4"),
+      ],
+      image: "/image1.jpg",
+      id: "ocean",
+    },
+    {
+      icon: Airplane,
+      title: t("services.air.title"),
+      description: t("services.air.description"),
+      features: [
+        t("services.air.f1"),
+        t("services.air.f2"),
+        t("services.air.f3"),
+        t("services.air.f4"),
+      ],
+      image: "/image3.jpg",
+      id: "air",
+    },
+    {
+      icon: Truck,
+      title: t("services.land.title"),
+      description: t("services.land.description"),
+      features: [
+        t("services.land.f1"),
+        t("services.land.f2"),
+        t("services.land.f3"),
+        t("services.land.f4"),
+      ],
+      image: "/trucks.jpg",
+      id: "land",
+    },
+    {
+      icon: Warehouse,
+      title: t("services.warehouse.title"),
+      description: t("services.warehouse.description"),
+      features: [
+        t("services.warehouse.f1"),
+        t("services.warehouse.f2"),
+        t("services.warehouse.f3"),
+        t("services.warehouse.f4"),
+      ],
+      image: "/image2.jpg",
+      id: "warehouse",
+    },
+    {
+      icon: Package,
+      title: t("services.multimodal.title"),
+      description: t("services.multimodal.description"),
+      features: [
+        t("services.multimodal.f1"),
+        t("services.multimodal.f2"),
+        t("services.multimodal.f3"),
+        t("services.multimodal.f4"),
+      ],
+      image: "/multimodal.jpg",
+      id: "multimodal",
+    },
+    {
+      icon: ShieldCheck,
+      title: t("services.allrisk.title"),
+      description: t("services.allrisk.description"),
+      features: [
+        t("services.allrisk.f1"),
+        t("services.allrisk.f2"),
+        t("services.allrisk.f3"),
+        t("services.allrisk.f4"),
+      ],
+      image: "/risk.jpg",
+      id: "allrisk",
+    },
+  ];
+
+  const benefits = [
+    {
+      icon: Shield,
+      title: t("benefits.maxProtection.title"),
+      description: t("benefits.maxProtection.description"),
+    },
+    {
+      icon: Coins,
+      title: t("benefits.competitiveRates.title"),
+      description: t("benefits.competitiveRates.description"),
+    },
+    {
+      icon: Clock,
+      title: t("benefits.claims48h.title"),
+      description: t("benefits.claims48h.description"),
+    },
+    {
+      icon: Files,
+      title: t("benefits.instantPolicies.title"),
+      description: t("benefits.instantPolicies.description"),
+    },
+  ];
+
+  const steps = [
+    {
+      num: NumberCircleOne,
+      title: t("steps.quote.title"),
+      desc: t("steps.quote.desc"),
+    },
+    {
+      num: NumberCircleTwo,
+      title: t("steps.bind.title"),
+      desc: t("steps.bind.desc"),
+    },
+    {
+      num: NumberCircleThree,
+      title: t("steps.ship.title"),
+      desc: t("steps.ship.desc"),
+    },
+    {
+      num: NumberCircleFour,
+      title: t("steps.claim.title"),
+      desc: t("steps.claim.desc"),
+    },
+  ];
+
+  const brokerageItems = [
+    {
+      icon: FileText,
+      title: t("brokerage.admitted.title"),
+      desc: t("brokerage.admitted.desc"),
+    },
+    {
+      icon: ShieldCheck,
+      title: t("brokerage.risk.title"),
+      desc: t("brokerage.risk.desc"),
+    },
+    {
+      icon: Coins,
+      title: t("brokerage.subrogation.title"),
+      desc: t("brokerage.subrogation.desc"),
+    },
+    {
+      icon: MagnifyingGlass,
+      title: t("brokerage.surveys.title"),
+      desc: t("brokerage.surveys.desc"),
+    },
+  ];
+
+  const claimsItems = [
+    {
+      icon: ChartBar,
+      title: t("claims.reporting.title"),
+      desc: t("claims.reporting.desc"),
+    },
+    {
+      icon: DeviceMobile,
+      title: t("claims.portal.title"),
+      desc: t("claims.portal.desc"),
+    },
+    {
+      icon: Globe,
+      title: t("claims.surveyor.title"),
+      desc: t("claims.surveyor.desc"),
+    },
+    {
+      icon: GraduationCap,
+      title: t("claims.education.title"),
+      desc: t("claims.education.desc"),
+    },
+  ];
+
+  const valueProps = [
+    {
+      icon: User,
+      title: t("valueProps.contact.title"),
+      desc: t("valueProps.contact.desc"),
+    },
+    {
+      icon: GraduationCap,
+      title: t("valueProps.experts.title"),
+      desc: t("valueProps.experts.desc"),
+    },
+    {
+      icon: ChartBar,
+      title: t("valueProps.analytics.title"),
+      desc: t("valueProps.analytics.desc"),
+    },
+    {
+      icon: DeviceMobile,
+      title: t("valueProps.tech.title"),
+      desc: t("valueProps.tech.desc"),
+    },
+    {
+      icon: Globe,
+      title: t("valueProps.global.title"),
+      desc: t("valueProps.global.desc"),
+    },
+  ];
+
+  const trustStats = [
+    { value: "12,000+", label: t("trust.shipments") },
+    { value: "98%", label: t("trust.claimsPaid") },
+    { value: "48 hrs", label: t("trust.settlement") },
+    { value: "A+", label: t("trust.underwriters") },
+  ];
+
+  const heroBullets = [
+    t("hero.bullet1"),
+    t("hero.bullet2"),
+    t("hero.bullet3"),
+    t("hero.bullet4"),
+  ];
+
+  const peopleBullets = [
+    t("people.bullet1"),
+    t("people.bullet2"),
+    t("people.bullet3"),
+    t("people.bullet4"),
+  ];
+
+  const cargoInsuranceItems = [
+    t("comparison.cargo.item1"),
+    t("comparison.cargo.item2"),
+    t("comparison.cargo.item3"),
+    t("comparison.cargo.item4"),
+    t("comparison.cargo.item5"),
+  ];
+
+  const carrierLiabilityItems = [
+    t("comparison.carrier.item1"),
+    t("comparison.carrier.item2"),
+    t("comparison.carrier.item3"),
+    t("comparison.carrier.item4"),
+    t("comparison.carrier.item5"),
+  ];
+
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-[#030712] text-gray-900 dark:text-white">
       <Header />
@@ -254,21 +288,16 @@ export default function ServicesPage() {
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div className="max-w-xl">
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white leading-tight mb-5">
-                  Insurance for{" "}
-                  <span className="text-[#0024ff]">Every Shipment</span>
+                  {t("hero.title1")}{" "}
+                  <span className="text-[#0024ff]">{t("hero.title2")}</span>
                 </h1>
 
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                  Ocean, air, land, and warehouse cover. Clear policies, straightforward claims, and people who understand logistics.
+                  {t("hero.subtitle")}
                 </p>
 
                 <ul className="space-y-2.5 mb-8">
-                  {[
-                    "All-risk and named-peril options",
-                    "Door-to-door multimodal cover",
-                    "A+ rated global underwriters",
-                    "Dedicated claims handlers",
-                  ].map((item) => (
+                  {heroBullets.map((item) => (
                     <li
                       key={item}
                       className="flex items-center gap-2.5 text-sm text-gray-700 dark:text-gray-300"
@@ -281,10 +310,10 @@ export default function ServicesPage() {
 
                 <div className="flex flex-wrap gap-4">
                   <Button variant="primary" size="lg" href="#coverage">
-                    Explore Services
+                    {t("hero.cta1")}
                   </Button>
                   <Button variant="outline" size="lg" href="/contact">
-                    Speak with an Expert
+                    {t("hero.cta2")}
                   </Button>
                 </div>
               </div>
@@ -294,7 +323,7 @@ export default function ServicesPage() {
                 <div className="relative col-span-2 border border-gray-200 dark:border-white/10 overflow-hidden">
                   <Image
                     src="/shipment.jpg"
-                    alt="Cargo vessel loading at port"
+                    alt={t("images.shipment")}
                     fill
                     className="object-cover"
                     priority
@@ -303,7 +332,7 @@ export default function ServicesPage() {
                 <div className="relative h-full border border-gray-200 dark:border-white/10 overflow-hidden">
                   <Image
                     src="/trucks.jpg"
-                    alt="Trucks at warehouse"
+                    alt={t("images.trucks")}
                     fill
                     className="object-cover"
                   />
@@ -311,7 +340,7 @@ export default function ServicesPage() {
                 <div className="relative h-full border border-gray-200 dark:border-white/10 overflow-hidden">
                   <Image
                     src="/image2.jpg"
-                    alt="Warehouse operations"
+                    alt={t("images.warehouse")}
                     fill
                     className="object-cover"
                   />
@@ -345,18 +374,13 @@ export default function ServicesPage() {
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                  Real people. Real operations.
+                  {t("people.title")}
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400 text-lg mb-6 leading-relaxed">
-                  We work every day with shippers, forwarders, and warehouse teams. Our claims handlers and underwriters understand the pressure of moving cargo on time and on budget.
+                  {t("people.subtitle")}
                 </p>
                 <ul className="space-y-3">
-                  {[
-                    "Dedicated account managers",
-                    "On-the-ground survey network",
-                    "Claims teams that pick up the phone",
-                    "Practical advice, not just policies",
-                  ].map((item) => (
+                  {peopleBullets.map((item) => (
                     <li key={item} className="flex items-center gap-2.5 text-sm text-gray-700 dark:text-gray-300">
                       <Check size={16} weight="bold" className="text-[#0024ff]" />
                       {item}
@@ -369,7 +393,7 @@ export default function ServicesPage() {
                 <div className="relative h-64 border border-gray-200 dark:border-white/10 overflow-hidden">
                   <Image
                     src="/man-woman.jpg"
-                    alt="Insurance team discussing a claim"
+                    alt={t("images.team")}
                     fill
                     className="object-cover"
                   />
@@ -377,7 +401,7 @@ export default function ServicesPage() {
                 <div className="relative h-64 border border-gray-200 dark:border-white/10 overflow-hidden">
                   <Image
                     src="/image3.webp"
-                    alt="Warehouse staff checking cargo"
+                    alt={t("images.staff")}
                     fill
                     className="object-cover"
                   />
@@ -385,7 +409,7 @@ export default function ServicesPage() {
                 <div className="relative h-48 col-span-2 border border-gray-200 dark:border-white/10 overflow-hidden">
                   <Image
                     src="/image1.jpg"
-                    alt="Port operations and container handling"
+                    alt={t("images.port")}
                     fill
                     className="object-cover"
                   />
@@ -400,10 +424,10 @@ export default function ServicesPage() {
           <div className="mx-auto max-w-7xl">
             <div className="max-w-2xl mb-14">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                Our Insurance Solutions
+                {t("coverage.title")}
               </h2>
               <p className="text-gray-600 dark:text-gray-400 text-lg">
-                Straightforward cover for every cargo type and transport method.
+                {t("coverage.subtitle")}
               </p>
             </div>
 
@@ -448,12 +472,12 @@ export default function ServicesPage() {
                         ))}
                       </ul>
 
-                      <a
+                      <Link
                         href="/contact"
                         className="mt-auto inline-flex items-center justify-center gap-2 w-full px-4 py-3 border border-[#0024ff] text-[#0024ff] hover:bg-[#0024ff] hover:text-white font-semibold text-sm transition-colors"
                       >
-                        Get a Quote <ArrowRight size={14} weight="bold" />
-                      </a>
+                        {t("getQuote")} <ArrowRight size={14} weight="bold" />
+                      </Link>
                     </div>
                   </div>
                 );
@@ -467,10 +491,10 @@ export default function ServicesPage() {
           <div className="mx-auto max-w-7xl">
             <div className="max-w-3xl mb-14">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                Brokerage & Claims Management
+                {t("brokerageClaims.title")}
               </h2>
               <p className="text-gray-600 dark:text-gray-400 text-lg">
-                We handle the full lifecycle from placing the policy to resolving the claim.
+                {t("brokerageClaims.subtitle")}
               </p>
             </div>
 
@@ -478,7 +502,7 @@ export default function ServicesPage() {
               <div className="relative h-72 border border-gray-200 dark:border-white/10 overflow-hidden">
                 <Image
                   src="/man-meeting.jpg"
-                  alt="Claims team reviewing documents"
+                  alt={t("images.claimsTeam")}
                   fill
                   className="object-cover"
                 />
@@ -486,7 +510,7 @@ export default function ServicesPage() {
               <div className="relative h-72 border border-gray-200 dark:border-white/10 overflow-hidden">
                 <Image
                   src="/cargoman.jpg"
-                  alt="Surveyor inspecting cargo"
+                  alt={t("images.surveyor")}
                   fill
                   className="object-cover"
                 />
@@ -498,7 +522,7 @@ export default function ServicesPage() {
                 <div className="flex items-center gap-3 mb-6">
                   <Handshake size={24} weight="bold" className="text-[#0024ff]" />
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                    Cargo Insurance Brokerage
+                    {t("brokerage.title")}
                   </h3>
                 </div>
                 <div className="space-y-6">
@@ -527,7 +551,7 @@ export default function ServicesPage() {
                 <div className="flex items-center gap-3 mb-6">
                   <Files size={24} weight="bold" className="text-[#0024ff]" />
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                    Cargo Claims Management
+                    {t("claims.title")}
                   </h3>
                 </div>
                 <div className="space-y-6">
@@ -560,10 +584,10 @@ export default function ServicesPage() {
           <div className="mx-auto max-w-7xl">
             <div className="max-w-2xl mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                Why Shippers Work With Us
+                {t("why.title")}
               </h2>
               <p className="text-gray-600 dark:text-gray-400 text-lg">
-                Clear communication, practical expertise, and a team that understands the realities of moving cargo.
+                {t("why.subtitle")}
               </p>
             </div>
 
@@ -594,13 +618,13 @@ export default function ServicesPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                  Practical Protection for Real Shipments
+                  {t("benefitsBand.title")}
                 </h2>
                 <p className="text-blue-100 text-lg mb-6">
-                  Solid underwriting, clear communication, and people who respond when you need them.
+                  {t("benefitsBand.subtitle")}
                 </p>
                 <Button variant="secondary" size="lg" href="/contact">
-                  Get Protected Now
+                  {t("benefitsBand.cta")}
                 </Button>
               </div>
 
@@ -627,10 +651,10 @@ export default function ServicesPage() {
           <div className="mx-auto max-w-7xl">
             <div className="max-w-2xl mb-14">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                How Cargo Insurance Works
+                {t("howItWorks.title")}
               </h2>
               <p className="text-gray-600 dark:text-gray-400 text-lg">
-                Four clear steps. No unnecessary paperwork.
+                {t("howItWorks.subtitle")}
               </p>
             </div>
 
@@ -661,10 +685,10 @@ export default function ServicesPage() {
           <div className="mx-auto max-w-5xl">
             <div className="max-w-2xl mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                Cargo Insurance vs. Carrier Liability
+                {t("comparison.title")}
               </h2>
               <p className="text-gray-600 dark:text-gray-400 text-lg">
-                Many shippers assume the carrier’s liability is enough. In most cases it is not.
+                {t("comparison.subtitle")}
               </p>
             </div>
 
@@ -673,17 +697,11 @@ export default function ServicesPage() {
                 <div className="flex items-center gap-3 mb-5">
                   <ShieldCheck size={24} weight="bold" className="text-[#0024ff]" />
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                    Cargo Insurance
+                    {t("comparison.cargo.title")}
                   </h3>
                 </div>
                 <ul className="space-y-3">
-                  {[
-                    "Covers full declared value of goods",
-                    "Protects against theft, fire, and Acts of God",
-                    "Covers damage from improper handling",
-                    "Pays even if carrier is not at fault",
-                    "Worldwide coverage, any transport mode",
-                  ].map((item, i) => (
+                  {cargoInsuranceItems.map((item, i) => (
                     <li key={i} className="flex items-start gap-2.5">
                       <Check size={16} weight="bold" className="text-green-600 mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-gray-700 dark:text-gray-300">{item}</span>
@@ -696,17 +714,11 @@ export default function ServicesPage() {
                 <div className="flex items-center gap-3 mb-5">
                   <Warning size={24} weight="bold" className="text-amber-500" />
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                    Carrier Liability Only
+                    {t("comparison.carrier.title")}
                   </h3>
                 </div>
                 <ul className="space-y-3">
-                  {[
-                    "Limited to $500 per package (COGSA)",
-                    "Excludes Acts of God and inherent vice",
-                    "Carrier must be proven negligent",
-                    "No cover for concealed damage",
-                    "Varies widely by jurisdiction",
-                  ].map((item, i) => (
+                  {carrierLiabilityItems.map((item, i) => (
                     <li key={i} className="flex items-start gap-2.5">
                       <X size={16} weight="bold" className="text-red-500 mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-gray-700 dark:text-gray-300">{item}</span>
@@ -725,7 +737,7 @@ export default function ServicesPage() {
               <div className="relative h-72 border border-gray-200 dark:border-white/10 overflow-hidden">
                 <Image
                   src="/personOffice.jpg"
-                  alt="Speaking with a cargo insurance specialist"
+                  alt={t("images.specialist")}
                   fill
                   className="object-cover"
                 />
@@ -733,17 +745,17 @@ export default function ServicesPage() {
               <div>
                 <Users size={36} weight="bold" className="text-[#0024ff] mb-4" />
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                  Ready to protect your next shipment?
+                  {t("finalCta.title")}
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400 mb-8">
-                  Talk to a cargo insurance specialist. No pressure — just clear answers about what you actually need.
+                  {t("finalCta.subtitle")}
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button variant="primary" size="lg" href="/contact">
-                    Speak with an Expert
+                    {t("finalCta.cta1")}
                   </Button>
                   <Button variant="outline" size="lg" href="#coverage">
-                    View All Services
+                    {t("finalCta.cta2")}
                   </Button>
                 </div>
               </div>
