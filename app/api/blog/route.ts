@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { getBlogPosts, isContentfulConfigured } from "@/lib/contentful";
-import { blogArticles } from "@/app/blog/blogData";
+import { blogArticles } from "@/app/[locale]/blog/blogData";
 
 export async function GET() {
   // If Contentful is not configured, return static fallback data
