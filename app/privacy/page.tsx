@@ -87,7 +87,7 @@ export default function PrivacyPage() {
               </p>
             </section>
 
-            <section className="space-y-3 p-6 bg-gray-50 dark:bg-gray-900/50 rounded-2xl border border-gray-100 dark:border-white/5">
+            <section className="space-y-3 p-6 bg-gray-50 dark:bg-gray-900/50 rounded-none border border-gray-100 dark:border-white/5">
               <h2 className="text-xl font-bold text-gray-900 dark:text-white">How can I contact you?</h2>
               <p className="text-sm">
                 If you have any questions about this Privacy Statement or any of the above please contact us at:

@@ -30,6 +30,8 @@ import {
   DeviceMobile,
   FileText,
   MagnifyingGlass,
+  Users,
+  Handshake,
 } from "@phosphor-icons/react";
 
 const services = [
@@ -44,7 +46,7 @@ const services = [
       "Claims support at major ports",
     ],
     image: "/image1.jpg",
-    id: "ocean"
+    id: "ocean",
   },
   {
     icon: Airplane,
@@ -57,7 +59,7 @@ const services = [
       "24/7 claims line",
     ],
     image: "/image3.jpg",
-    id: "air"
+    id: "air",
   },
   {
     icon: Truck,
@@ -70,7 +72,7 @@ const services = [
       "Cross-border included",
     ],
     image: "/trucks.jpg",
-    id: "land"
+    id: "land",
   },
   {
     icon: Warehouse,
@@ -83,7 +85,7 @@ const services = [
       "Inventory support",
     ],
     image: "/image2.jpg",
-    id: "warehouse"
+    id: "warehouse",
   },
   {
     icon: Package,
@@ -96,7 +98,7 @@ const services = [
       "Global network",
     ],
     image: "/multimodal.jpg",
-    id: "multimodal"
+    id: "multimodal",
   },
   {
     icon: ShieldCheck,
@@ -109,7 +111,7 @@ const services = [
       "Risk consultants available",
     ],
     image: "/risk.jpg",
-    id: "allrisk"
+    id: "allrisk",
   },
 ];
 
@@ -191,7 +193,7 @@ const claimsItems = [
   {
     icon: DeviceMobile,
     title: "TRACE® Web Portal",
-    desc: "Real-time visibility into certificates, claims, documents, and reporting web and mobile.",
+    desc: "Real-time visibility into certificates, claims, documents, and reporting — web and mobile.",
   },
   {
     icon: Globe,
@@ -233,6 +235,13 @@ const valueProps = [
   },
 ];
 
+const trustStats = [
+  { value: "12,000+", label: "Shipments Covered" },
+  { value: "98%", label: "Claims Paid" },
+  { value: "48 hrs", label: "Average Claims Settlement" },
+  { value: "A+", label: "Rated Underwriters" },
+];
+
 export default function ServicesPage() {
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-[#030712] text-gray-900 dark:text-white">
@@ -240,19 +249,17 @@ export default function ServicesPage() {
 
       <main className="flex-grow pt-16">
         {/* Hero */}
-        <section className="relative overflow-hidden bg-white dark:bg-[#030712]">
-          <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full bg-slate-50 dark:bg-gray-900/30" />
-
-          <div className="relative max-w-7xl mx-auto px-6 md:px-8 py-20 lg:py-28">
+        <section className="relative bg-white dark:bg-[#030712] border-b border-gray-200 dark:border-white/10">
+          <div className="max-w-7xl mx-auto px-6 md:px-8 py-16 lg:py-20">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              <div className="relative z-10 max-w-xl">
-                <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-gray-900 dark:text-white leading-[1.1] mb-6">
-                  Insurance for <br />
+              <div className="max-w-xl">
+                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white leading-tight mb-5">
+                  Insurance for{" "}
                   <span className="text-[#0024ff]">Every Shipment</span>
                 </h1>
 
-                <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                  Ocean, air, land, and warehouse cover. One platform to quote, bind, and claim no brokers, no delays.
+                <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                  Ocean, air, land, and warehouse cover. Clear policies, straightforward claims, and people who understand logistics.
                 </p>
 
                 <ul className="space-y-2.5 mb-8">
@@ -260,16 +267,20 @@ export default function ServicesPage() {
                     "All-risk and named-peril options",
                     "Door-to-door multimodal cover",
                     "A+ rated global underwriters",
+                    "Dedicated claims handlers",
                   ].map((item) => (
-                    <li key={item} className="flex items-center gap-2.5 text-sm text-gray-600 dark:text-gray-300">
+                    <li
+                      key={item}
+                      className="flex items-center gap-2.5 text-sm text-gray-700 dark:text-gray-300"
+                    >
                       <Check size={16} weight="bold" className="text-[#0024ff] flex-shrink-0" />
                       {item}
                     </li>
                   ))}
                 </ul>
 
-                <div className="flex flex-wrap gap-4 mb-10">
-                  <Button variant="primary" size="lg" href="#services">
+                <div className="flex flex-wrap gap-4">
+                  <Button variant="primary" size="lg" href="#coverage">
                     Explore Services
                   </Button>
                   <Button variant="outline" size="lg" href="/contact">
@@ -278,23 +289,103 @@ export default function ServicesPage() {
                 </div>
               </div>
 
-              <div className="relative h-[420px] md:h-[500px] lg:h-[540px]">
-                <div className="absolute top-8 right-0 w-[85%] h-[80%] bg-[#0024ff]/10 rounded-2xl" />
-
-                <div className="absolute top-0 left-0 w-[82%] h-[72%] rounded-xl overflow-hidden shadow-lg">
+              {/* Operational images */}
+              <div className="grid grid-cols-2 gap-3 h-[420px]">
+                <div className="relative col-span-2 border border-gray-200 dark:border-white/10 overflow-hidden">
                   <Image
                     src="/shipment.jpg"
-                    alt="Cargo vessel at port"
+                    alt="Cargo vessel loading at port"
                     fill
                     className="object-cover"
                     priority
                   />
                 </div>
-
-                <div className="absolute bottom-0 right-0 w-[60%] h-[50%] rounded-xl overflow-hidden shadow-lg border-4 border-white dark:border-[#030712]">
+                <div className="relative h-full border border-gray-200 dark:border-white/10 overflow-hidden">
                   <Image
-                    src="/complaince.jpg"
-                    alt="Container terminal"
+                    src="/trucks.jpg"
+                    alt="Trucks at warehouse"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative h-full border border-gray-200 dark:border-white/10 overflow-hidden">
+                  <Image
+                    src="/image2.jpg"
+                    alt="Warehouse operations"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Trust bar */}
+        <section className="bg-gray-50 dark:bg-gray-950 border-b border-gray-200 dark:border-white/10">
+          <div className="max-w-7xl mx-auto px-6 md:px-8 py-10">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              {trustStats.map((stat) => (
+                <div key={stat.label}>
+                  <p className="text-2xl md:text-3xl font-bold text-[#0024ff]">
+                    {stat.value}
+                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* People & Operations */}
+        <section className="py-16 px-6 md:px-8 border-b border-gray-200 dark:border-white/10">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-10 items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                  Real people. Real operations.
+                </h2>
+                <p className="text-gray-600 dark:text-gray-400 text-lg mb-6 leading-relaxed">
+                  We work every day with shippers, forwarders, and warehouse teams. Our claims handlers and underwriters understand the pressure of moving cargo on time and on budget.
+                </p>
+                <ul className="space-y-3">
+                  {[
+                    "Dedicated account managers",
+                    "On-the-ground survey network",
+                    "Claims teams that pick up the phone",
+                    "Practical advice, not just policies",
+                  ].map((item) => (
+                    <li key={item} className="flex items-center gap-2.5 text-sm text-gray-700 dark:text-gray-300">
+                      <Check size={16} weight="bold" className="text-[#0024ff]" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <div className="relative h-64 border border-gray-200 dark:border-white/10 overflow-hidden">
+                  <Image
+                    src="/man-woman.jpg"
+                    alt="Insurance team discussing a claim"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative h-64 border border-gray-200 dark:border-white/10 overflow-hidden">
+                  <Image
+                    src="/image3.webp"
+                    alt="Warehouse staff checking cargo"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative h-48 col-span-2 border border-gray-200 dark:border-white/10 overflow-hidden">
+                  <Image
+                    src="/image1.jpg"
+                    alt="Port operations and container handling"
                     fill
                     className="object-cover"
                   />
@@ -307,12 +398,12 @@ export default function ServicesPage() {
         {/* Services Grid */}
         <section id="coverage" className="py-20 px-6 md:px-8">
           <div className="mx-auto max-w-7xl">
-            <div className="text-center max-w-2xl mx-auto mb-16">
+            <div className="max-w-2xl mb-14">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
                 Our Insurance Solutions
               </h2>
-              <p className="text-gray-600 dark:text-gray-400">
-                Cover for every cargo type and transport method.
+              <p className="text-gray-600 dark:text-gray-400 text-lg">
+                Straightforward cover for every cargo type and transport method.
               </p>
             </div>
 
@@ -323,35 +414,35 @@ export default function ServicesPage() {
                   <div
                     id={service.id}
                     key={service.id}
-                    className="bg-white dark:bg-gray-900 rounded-lg border border-gray-100 dark:border-white/5 overflow-hidden group flex flex-col"
+                    className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-white/10 flex flex-col"
                   >
-                    <div className="relative h-52 w-full overflow-hidden">
+                    <div className="relative h-52 w-full overflow-hidden border-b border-gray-200 dark:border-white/10">
                       <Image
                         src={service.image}
                         alt={service.title}
                         fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        className="object-cover"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-gray-950/70 to-transparent" />
-                      <div className="absolute bottom-4 left-4 w-10 h-10 bg-white/90 dark:bg-gray-900/90 rounded-lg flex items-center justify-center text-[#0024ff]">
-                        <Icon size={20} weight="bold" />
-                      </div>
                     </div>
 
-                    <div className="p-6 flex flex-col flex-grow space-y-4">
-                      <div>
-                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                    <div className="p-6 flex flex-col flex-grow">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 bg-[#0024ff]/10 flex items-center justify-center text-[#0024ff]">
+                          <Icon size={20} weight="bold" />
+                        </div>
+                        <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                           {service.title}
                         </h3>
-                        <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                          {service.description}
-                        </p>
                       </div>
 
-                      <ul className="space-y-2">
+                      <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-5">
+                        {service.description}
+                      </p>
+
+                      <ul className="space-y-2 mb-6">
                         {service.features.map((feature, i) => (
                           <li key={i} className="flex items-start gap-2">
-                            <Check size={14} weight="bold" className="text-[#0024ff] mt-1 flex-shrink-0" />
+                            <Check size={14} weight="bold" className="text-[#0024ff] mt-0.5 flex-shrink-0" />
                             <span className="text-sm text-gray-700 dark:text-gray-300">{feature}</span>
                           </li>
                         ))}
@@ -359,9 +450,9 @@ export default function ServicesPage() {
 
                       <a
                         href="/contact"
-                        className="mt-auto inline-flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#0024ff]/5 hover:bg-[#0024ff] text-[#0024ff] hover:text-white rounded-lg font-semibold text-sm transition-colors"
+                        className="mt-auto inline-flex items-center justify-center gap-2 w-full px-4 py-3 border border-[#0024ff] text-[#0024ff] hover:bg-[#0024ff] hover:text-white font-semibold text-sm transition-colors"
                       >
-                        Get Quote <ArrowRight size={14} weight="bold" />
+                        Get a Quote <ArrowRight size={14} weight="bold" />
                       </a>
                     </div>
                   </div>
@@ -372,33 +463,54 @@ export default function ServicesPage() {
         </section>
 
         {/* Brokerage & Claims */}
-        <section className="py-20 px-6 md:px-8 bg-gray-50 dark:bg-gray-950 border-y border-gray-100 dark:border-white/5">
+        <section className="py-20 px-6 md:px-8 bg-gray-50 dark:bg-gray-950 border-y border-gray-200 dark:border-white/10">
           <div className="mx-auto max-w-7xl">
-            <div className="text-center max-w-3xl mx-auto mb-14">
+            <div className="max-w-3xl mb-14">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
                 Brokerage & Claims Management
               </h2>
-              <p className="text-gray-600 dark:text-gray-400">
-                With deep roots in logistics, we handle the full lifecycle from policy placement to claim resolution.
+              <p className="text-gray-600 dark:text-gray-400 text-lg">
+                We handle the full lifecycle from placing the policy to resolving the claim.
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-10">
-              {/* Brokerage */}
-              <div className="bg-white dark:bg-gray-900 rounded-lg border border-gray-100 dark:border-white/5 p-8">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
-                  Cargo Insurance Brokerage
-                </h3>
-                <div className="space-y-5">
+            <div className="grid lg:grid-cols-2 gap-6 mb-12">
+              <div className="relative h-72 border border-gray-200 dark:border-white/10 overflow-hidden">
+                <Image
+                  src="/man-meeting.jpg"
+                  alt="Claims team reviewing documents"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative h-72 border border-gray-200 dark:border-white/10 overflow-hidden">
+                <Image
+                  src="/cargoman.jpg"
+                  alt="Surveyor inspecting cargo"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-6">
+              <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-white/10 p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <Handshake size={24} weight="bold" className="text-[#0024ff]" />
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                    Cargo Insurance Brokerage
+                  </h3>
+                </div>
+                <div className="space-y-6">
                   {brokerageItems.map((item, i) => {
                     const Icon = item.icon;
                     return (
-                      <div key={i} className="flex items-start gap-3">
-                        <div className="w-9 h-9 bg-[#0024ff]/10 rounded-lg flex items-center justify-center text-[#0024ff] flex-shrink-0 mt-0.5">
+                      <div key={i} className="flex items-start gap-4">
+                        <div className="w-9 h-9 bg-[#0024ff]/10 flex items-center justify-center text-[#0024ff] flex-shrink-0">
                           <Icon size={18} weight="bold" />
                         </div>
                         <div>
-                          <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-0.5">
+                          <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1">
                             {item.title}
                           </h4>
                           <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -411,21 +523,23 @@ export default function ServicesPage() {
                 </div>
               </div>
 
-              {/* Claims */}
-              <div className="bg-white dark:bg-gray-900 rounded-lg border border-gray-100 dark:border-white/5 p-8">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
-                  Cargo Claims Management
-                </h3>
-                <div className="space-y-5">
+              <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-white/10 p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <Files size={24} weight="bold" className="text-[#0024ff]" />
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                    Cargo Claims Management
+                  </h3>
+                </div>
+                <div className="space-y-6">
                   {claimsItems.map((item, i) => {
                     const Icon = item.icon;
                     return (
-                      <div key={i} className="flex items-start gap-3">
-                        <div className="w-9 h-9 bg-[#0024ff]/10 rounded-lg flex items-center justify-center text-[#0024ff] flex-shrink-0 mt-0.5">
+                      <div key={i} className="flex items-start gap-4">
+                        <div className="w-9 h-9 bg-[#0024ff]/10 flex items-center justify-center text-[#0024ff] flex-shrink-0">
                           <Icon size={18} weight="bold" />
                         </div>
                         <div>
-                          <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-0.5">
+                          <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1">
                             {item.title}
                           </h4>
                           <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -441,15 +555,15 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* Value Props */}
+        {/* Why Work With Us */}
         <section className="py-20 px-6 md:px-8">
           <div className="mx-auto max-w-7xl">
-            <div className="text-center max-w-2xl mx-auto mb-12">
+            <div className="max-w-2xl mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                Why Work With Us
+                Why Shippers Work With Us
               </h2>
-              <p className="text-gray-600 dark:text-gray-400">
-                Five reasons shippers and forwarders choose Kovasure as their broker.
+              <p className="text-gray-600 dark:text-gray-400 text-lg">
+                Clear communication, practical expertise, and a team that understands the realities of moving cargo.
               </p>
             </div>
 
@@ -457,18 +571,16 @@ export default function ServicesPage() {
               {valueProps.map((prop, i) => {
                 const Icon = prop.icon;
                 return (
-                  <div key={i} className="flex items-start gap-3">
-                    <div className="w-10 h-10 bg-[#0024ff]/10 rounded-lg flex items-center justify-center text-[#0024ff] flex-shrink-0">
+                  <div key={i} className="border border-gray-200 dark:border-white/10 p-6">
+                    <div className="w-10 h-10 bg-[#0024ff]/10 flex items-center justify-center text-[#0024ff] mb-4">
                       <Icon size={20} weight="bold" />
                     </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1">
-                        {prop.title}
-                      </h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                        {prop.desc}
-                      </p>
-                    </div>
+                    <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                      {prop.title}
+                    </h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                      {prop.desc}
+                    </p>
                   </div>
                 );
               })}
@@ -476,34 +588,31 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* Benefits */}
-        <section className="relative py-24 px-6 md:px-8 bg-[#0024ff] text-white">
+        {/* Benefits band */}
+        <section className="py-16 px-6 md:px-8 bg-[#0024ff] text-white">
           <div className="mx-auto max-w-7xl">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-5">
-                <h2 className="text-3xl md:text-4xl font-bold">
-                  Why Shippers Choose Kovasure
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                  Practical Protection for Real Shipments
                 </h2>
-                <p className="text-blue-100 text-lg">
-                  We combine solid underwriting with digital tools and global reach to keep your cargo covered.
+                <p className="text-blue-100 text-lg mb-6">
+                  Solid underwriting, clear communication, and people who respond when you need them.
                 </p>
                 <Button variant="secondary" size="lg" href="/contact">
                   Get Protected Now
                 </Button>
               </div>
 
-              <div className="grid sm:grid-cols-2 gap-6">
+              <div className="grid sm:grid-cols-2 gap-5">
                 {benefits.map((benefit, index) => {
                   const Icon = benefit.icon;
                   return (
-                    <div
-                      key={index}
-                      className="bg-white/10 border border-white/15 p-6 rounded-lg space-y-3"
-                    >
-                      <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-[#ffb41d]">
+                    <div key={index} className="bg-white/10 border border-white/20 p-5">
+                      <div className="w-10 h-10 bg-white/15 flex items-center justify-center text-[#ffb41d] mb-3">
                         <Icon size={22} weight="bold" />
                       </div>
-                      <h3 className="text-lg font-bold">{benefit.title}</h3>
+                      <h3 className="text-xl font-bold mb-1">{benefit.title}</h3>
                       <p className="text-sm text-blue-100">{benefit.description}</p>
                     </div>
                   );
@@ -514,14 +623,14 @@ export default function ServicesPage() {
         </section>
 
         {/* How It Works */}
-        <section className="py-20 px-6 md:px-8 bg-gray-50 dark:bg-gray-950">
+        <section className="py-20 px-6 md:px-8 bg-gray-50 dark:bg-gray-950 border-y border-gray-200 dark:border-white/10">
           <div className="mx-auto max-w-7xl">
-            <div className="text-center max-w-2xl mx-auto mb-14">
+            <div className="max-w-2xl mb-14">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
                 How Cargo Insurance Works
               </h2>
-              <p className="text-gray-600 dark:text-gray-400">
-                Four steps from quote to covered shipment. No paperwork, no delays.
+              <p className="text-gray-600 dark:text-gray-400 text-lg">
+                Four clear steps. No unnecessary paperwork.
               </p>
             </div>
 
@@ -529,10 +638,17 @@ export default function ServicesPage() {
               {steps.map((step, i) => {
                 const Num = step.num;
                 return (
-                  <div key={i} className="bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-100 dark:border-white/5 space-y-3">
-                    <Num size={36} weight="bold" className="text-[#0024ff]" />
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white">{step.title}</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{step.desc}</p>
+                  <div
+                    key={i}
+                    className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-white/10 p-6"
+                  >
+                    <Num size={32} weight="bold" className="text-[#0024ff] mb-4" />
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                      {step.title}
+                    </h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                      {step.desc}
+                    </p>
                   </div>
                 );
               })}
@@ -543,20 +659,22 @@ export default function ServicesPage() {
         {/* Coverage Gap Comparison */}
         <section className="py-20 px-6 md:px-8">
           <div className="mx-auto max-w-5xl">
-            <div className="text-center max-w-2xl mx-auto mb-14">
+            <div className="max-w-2xl mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
                 Cargo Insurance vs. Carrier Liability
               </h2>
-              <p className="text-gray-600 dark:text-gray-400">
-                Most shippers assume their carrier covers everything. They do not.
+              <p className="text-gray-600 dark:text-gray-400 text-lg">
+                Many shippers assume the carrier’s liability is enough. In most cases it is not.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white dark:bg-gray-900 rounded-lg border border-gray-100 dark:border-white/5 p-6 space-y-4">
-                <div className="flex items-center gap-3">
+              <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-white/10 p-6">
+                <div className="flex items-center gap-3 mb-5">
                   <ShieldCheck size={24} weight="bold" className="text-[#0024ff]" />
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">Cargo Insurance</h3>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                    Cargo Insurance
+                  </h3>
                 </div>
                 <ul className="space-y-3">
                   {[
@@ -567,17 +685,19 @@ export default function ServicesPage() {
                     "Worldwide coverage, any transport mode",
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-2.5">
-                      <Check size={16} weight="bold" className="text-green-500 mt-0.5 flex-shrink-0" />
+                      <Check size={16} weight="bold" className="text-green-600 mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-gray-700 dark:text-gray-300">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="bg-white dark:bg-gray-900 rounded-lg border border-gray-100 dark:border-white/5 p-6 space-y-4">
-                <div className="flex items-center gap-3">
+              <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-white/10 p-6">
+                <div className="flex items-center gap-3 mb-5">
                   <Warning size={24} weight="bold" className="text-amber-500" />
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">Carrier Liability Only</h3>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                    Carrier Liability Only
+                  </h3>
                 </div>
                 <ul className="space-y-3">
                   {[
@@ -585,7 +705,7 @@ export default function ServicesPage() {
                     "Excludes Acts of God and inherent vice",
                     "Carrier must be proven negligent",
                     "No cover for concealed damage",
-                    "Varies wildly by jurisdiction",
+                    "Varies widely by jurisdiction",
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-2.5">
                       <X size={16} weight="bold" className="text-red-500 mt-0.5 flex-shrink-0" />
@@ -593,6 +713,39 @@ export default function ServicesPage() {
                     </li>
                   ))}
                 </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Final CTA */}
+        <section className="py-16 px-6 md:px-8 bg-gray-50 dark:bg-gray-950 border-t border-gray-200 dark:border-white/10">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-10 items-center">
+              <div className="relative h-72 border border-gray-200 dark:border-white/10 overflow-hidden">
+                <Image
+                  src="/personOffice.jpg"
+                  alt="Speaking with a cargo insurance specialist"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <Users size={36} weight="bold" className="text-[#0024ff] mb-4" />
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                  Ready to protect your next shipment?
+                </h2>
+                <p className="text-gray-600 dark:text-gray-400 mb-8">
+                  Talk to a cargo insurance specialist. No pressure — just clear answers about what you actually need.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Button variant="primary" size="lg" href="/contact">
+                    Speak with an Expert
+                  </Button>
+                  <Button variant="outline" size="lg" href="#coverage">
+                    View All Services
+                  </Button>
+                </div>
               </div>
             </div>
           </div>

@@ -84,14 +84,14 @@ export default function BlogSection() {
           </div>
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#0024ff] text-white rounded-lg text-sm font-semibold hover:bg-blue-700 transition-colors"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#0024ff] text-white text-sm font-semibold hover:bg-blue-700 transition-colors"
           >
             View All <ArrowRight size={14} weight="bold" />
           </Link>
         </div>
 
         {loading ? (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-0 border border-gray-200 dark:border-white/10">
             {Array.from({ length: 3 }).map((_, i) => (
               <BlogCardSkeleton key={i} index={i} />
             ))}
@@ -99,19 +99,13 @@ export default function BlogSection() {
         ) : posts.length === 0 ? (
           <EmptyBlogState />
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {posts.map((post) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-0 border border-gray-200 dark:border-white/10">
+            {posts.map((post, index) => (
               <article
                 key={post.slug}
-                className="bg-white dark:bg-gray-900 rounded-lg border border-gray-100 dark:border-white/5 overflow-hidden flex flex-col"
+                className="bg-white dark:bg-gray-900 border-r border-b border-gray-200 dark:border-white/10 last:border-r-0 md:even:border-r-0 lg:even:border-r lg:[&:nth-child(3n)]:border-r-0 overflow-hidden flex flex-col"
               >
-                <div className="p-5 pb-3">
-                  <span className="text-[#0024ff] text-xs font-semibold uppercase">
-                    {post.category}
-                  </span>
-                </div>
-
-                <div className="relative h-40 bg-gray-100 dark:bg-gray-800 mx-5 rounded-lg overflow-hidden">
+                <div className="relative h-48 bg-gray-100 dark:bg-gray-800 overflow-hidden">
                   {post.image ? (
                     <Image
                       src={post.image}
@@ -130,9 +124,12 @@ export default function BlogSection() {
                       />
                     </div>
                   )}
+                  <div className="absolute top-4 left-4 px-3 py-1 bg-[#0024ff] text-white text-xs font-semibold uppercase">
+                    {post.category}
+                  </div>
                 </div>
 
-                <div className="p-5 space-y-2 flex-grow">
+                <div className="p-6 space-y-3 flex-grow">
                   <div className="flex items-center gap-3 text-xs text-gray-400">
                     <span className="flex items-center gap-1">
                       <Calendar size={12} weight="bold" />
@@ -144,7 +141,7 @@ export default function BlogSection() {
                     </span>
                   </div>
 
-                  <h3 className="text-base font-bold text-gray-900 dark:text-white leading-snug">
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white leading-snug">
                     {post.title}
                   </h3>
                   <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-3">
@@ -152,7 +149,7 @@ export default function BlogSection() {
                   </p>
                 </div>
 
-                <div className="px-5 pb-5">
+                <div className="px-6 pb-6">
                   <Link
                     href={`/blog/${post.slug}`}
                     className="inline-flex items-center text-sm font-semibold text-[#0024ff] hover:text-blue-700 gap-1"

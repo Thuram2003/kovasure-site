@@ -14,9 +14,6 @@ import {
   Clock,
   PaperPlaneRight,
   CheckCircle,
-  ChatCenteredText,
-  Globe,
-  ShieldCheck,
 } from "@phosphor-icons/react";
 
 export default function ContactPage() {
@@ -60,66 +57,125 @@ export default function ContactPage() {
       <Header />
 
       <main className="flex-grow pt-16">
-        {/* Hero */}
-        <section className="bg-slate-50 dark:bg-gray-950 py-20 md:py-28 border-b border-gray-100 dark:border-white/5">
-          <div className="mx-auto max-w-7xl px-6 md:px-8">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
-                <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  Get in Touch <br />
-                  <span className="text-[#0024ff]">with Kovasure</span>
-                </h1>
-                <p className="text-lg text-gray-600 dark:text-gray-300 max-w-lg">
-                  Questions about cargo insurance? Our team is here to help.
-                </p>
-              </div>
-
-              <div className="relative">
-                <div className="relative h-[380px] w-full rounded-lg overflow-hidden shadow-lg">
+        {/* 2-Column Layout: Image+Details on Left, Form on Right */}
+        <section className="py-16 px-6 md:px-8">
+          <div className="mx-auto max-w-7xl">
+            <div className="grid lg:grid-cols-2 gap-0 min-h-[600px]">
+              {/* Left Column: Image + Contact Details */}
+              <div className="bg-gray-50 dark:bg-gray-950 border border-gray-200 dark:border-white/10 flex flex-col">
+                {/* Image */}
+                <div className="relative h-80 border-b border-gray-200 dark:border-white/10">
                   <Image
-                    src="/meeting.jpg"
-                    alt="Kovasure office"
+                    src="/personOffice.jpg"
+                    alt="Get in touch with Kovasure"
                     fill
                     className="object-cover"
                     priority
                   />
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Form + Contact Info */}
-        <section className="py-20 px-6 md:px-8">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid lg:grid-cols-2 gap-12 items-start">
-              {/* Form */}
-              <div className="bg-white dark:bg-gray-900 rounded-lg p-8 border border-gray-100 dark:border-white/5">
-                <div className="mb-8">
+                {/* Contact Info */}
+                <div className="p-8 flex-grow space-y-8">
+                  <div>
+                    <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3">
+                      Get in Touch
+                    </h1>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      Questions about cargo insurance? Our team is here to help.
+                    </p>
+                  </div>
+
+                  <div className="space-y-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 bg-[#0024ff]/10 flex items-center justify-center text-[#0024ff] flex-shrink-0">
+                        <MapPin size={20} weight="bold" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1">Headquarters</h4>
+                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                          4 Etage, Bonaberi, Douala, Cameroon
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 bg-[#0024ff]/10 flex items-center justify-center text-[#0024ff] flex-shrink-0">
+                        <Phone size={20} weight="bold" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1">Phone</h4>
+                        <a
+                          href="tel:+237677777777"
+                          className="text-sm text-[#0024ff] hover:underline block"
+                        >
+                          +237 677 77 77 77
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 bg-[#0024ff]/10 flex items-center justify-center text-[#0024ff] flex-shrink-0">
+                        <EnvelopeSimple size={20} weight="bold" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1">Email</h4>
+                        <a
+                          href="mailto:support@kovasure.com"
+                          className="text-sm text-[#0024ff] hover:underline block"
+                        >
+                          support@kovasure.com
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 bg-[#0024ff]/10 flex items-center justify-center text-[#0024ff] flex-shrink-0">
+                        <Clock size={20} weight="bold" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1">Business Hours</h4>
+                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                          Mon - Fri, 9:00 AM - 6:00 PM GMT
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="pt-6 border-t border-gray-200 dark:border-white/10">
+                    <p className="text-sm text-gray-600 dark:text-gray-400 italic">
+                      We typically respond within 24 hours on business days.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column: Contact Form */}
+              <div className="bg-white dark:bg-gray-900 border-t lg:border-t-0 lg:border-l border-b border-r border-gray-200 dark:border-white/10 p-8 flex flex-col">
+                <div className="mb-6">
                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                     Send Us a Message
                   </h2>
-                  <p className="text-gray-500 dark:text-gray-400 text-sm">
-                    We usually reply within 24 hours.
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    Fill out the form and we'll get back to you soon.
                   </p>
                 </div>
 
                 {status === "success" ? (
-                  <div className="text-center py-10 space-y-4">
-                    <CheckCircle size={40} weight="fill" className="text-green-500 mx-auto" />
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">Message Sent</h3>
+                  <div className="text-center py-10 space-y-4 flex-grow flex flex-col justify-center">
+                    <CheckCircle size={48} weight="fill" className="text-green-500 mx-auto" />
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">Message Sent Successfully</h3>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
-                      We will get back to you shortly.
+                      We've received your message and will respond shortly.
                     </p>
                     <Button variant="primary" size="default" onClick={() => setStatus("idle")}>
-                      Send Another
+                      Send Another Message
                     </Button>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-5">
+                  <form onSubmit={handleSubmit} className="space-y-5 flex-grow">
                     <div className="grid sm:grid-cols-2 gap-5">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+                        <label className="block text-sm font-semibold text-gray-900 dark:text-white mb-2">
                           Full Name *
                         </label>
                         <Input
@@ -132,7 +188,7 @@ export default function ContactPage() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+                        <label className="block text-sm font-semibold text-gray-900 dark:text-white mb-2">
                           Email *
                         </label>
                         <Input
@@ -148,7 +204,7 @@ export default function ContactPage() {
 
                     <div className="grid sm:grid-cols-2 gap-5">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+                        <label className="block text-sm font-semibold text-gray-900 dark:text-white mb-2">
                           Phone
                         </label>
                         <Input
@@ -160,7 +216,7 @@ export default function ContactPage() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+                        <label className="block text-sm font-semibold text-gray-900 dark:text-white mb-2">
                           Company
                         </label>
                         <Input
@@ -174,7 +230,7 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+                      <label className="block text-sm font-semibold text-gray-900 dark:text-white mb-2">
                         Subject *
                       </label>
                       <Select name="subject" value={formData.subject} onChange={handleChange} required>
@@ -187,16 +243,16 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+                      <label className="block text-sm font-semibold text-gray-900 dark:text-white mb-2">
                         Message *
                       </label>
                       <textarea
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
-                        className="flex w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-white/10 rounded-lg text-gray-900 dark:text-white text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0024ff] focus:border-[#0024ff] resize-none"
+                        className="flex w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0024ff] focus:border-[#0024ff] resize-none"
                         placeholder="Tell us about your cargo, route, and what you need covered..."
-                        rows={4}
+                        rows={5}
                         required
                       />
                     </div>
@@ -219,74 +275,6 @@ export default function ContactPage() {
                     </Button>
                   </form>
                 )}
-              </div>
-
-              {/* Contact Info */}
-              <div className="space-y-8">
-                <div>
-                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                    Contact Information
-                  </h2>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    Reach us directly through any of these channels.
-                  </p>
-                </div>
-
-                <div className="bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-white/5 rounded-lg p-6 space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-[#0024ff]/10 rounded-lg flex items-center justify-center text-[#0024ff] flex-shrink-0">
-                      <MapPin size={20} weight="bold" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 dark:text-white text-sm">Headquarters</h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-0.5">
-                        4 Etage, Bonaberi, Douala, Cameroon
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-[#0024ff]/10 rounded-lg flex items-center justify-center text-[#0024ff] flex-shrink-0">
-                      <Phone size={20} weight="bold" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 dark:text-white text-sm">Phone</h4>
-                      <a
-                        href="tel:+237677777777"
-                        className="text-sm text-[#0024ff] hover:underline mt-0.5 block"
-                      >
-                        +237 677 77 77 77
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-[#0024ff]/10 rounded-lg flex items-center justify-center text-[#0024ff] flex-shrink-0">
-                      <EnvelopeSimple size={20} weight="bold" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 dark:text-white text-sm">Email</h4>
-                      <a
-                        href="mailto:support@kovasure.com"
-                        className="text-sm text-[#0024ff] hover:underline mt-0.5 block"
-                      >
-                        support@kovasure.com
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-[#0024ff]/10 rounded-lg flex items-center justify-center text-[#0024ff] flex-shrink-0">
-                      <Clock size={20} weight="bold" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 dark:text-white text-sm">Hours</h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-0.5">
-                        Mon - Fri, 9:00 AM - 6:00 PM GMT
-                      </p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

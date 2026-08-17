@@ -1,11 +1,12 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import CoverageSection from "@/components/CoverageSection";
-import HowItWorksSection from "@/components/HowItWorksSection";
 import BenefitsSection from "@/components/BenefitsSection";
+import HowItWorksSection from "@/components/HowItWorksSection";
+import TrustSection from "@/components/TrustSection";
 import DownloadSection from "@/components/DownloadSection";
-import BlogSection from "@/components/BlogSection";
 import FAQSection from "@/components/FAQSection";
+import BlogSection from "@/components/BlogSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -13,13 +14,15 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-white antialiased">
       <Header />
       
-      <main role="main" className="overflow-x-hidden">
+      <main role="main" className="overflow-x-hidden pt-16">
         <HeroSection />
-        <HowItWorksSection />
+        <CoverageSection />
         <BenefitsSection />
+        <HowItWorksSection />
+        <TrustSection />
         <DownloadSection />
-        <BlogSection />
         <FAQSection />
+        <BlogSection />
       </main>
 
       <Footer />

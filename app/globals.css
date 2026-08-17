@@ -28,9 +28,8 @@ html.dark {
   --color-foreground: var(--foreground);
   --color-border-custom: var(--border-color);
   
-  --shadow-soft: 0 4px 20px -2px rgba(0, 36, 255, 0.05), 0 2px 8px -1px rgba(0, 36, 255, 0.03);
-  --shadow-glow-blue: 0 0 30px rgba(0, 36, 255, 0.15);
-  --shadow-glow-gold: 0 0 30px rgba(255, 180, 29, 0.15);
+  --shadow-sharp: 0 2px 8px -1px rgba(0, 0, 0, 0.1);
+  --shadow-strong: 0 4px 16px -2px rgba(0, 0, 0, 0.15);
 }
 
 body {
@@ -46,9 +45,10 @@ html {
   background-color: var(--background);
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar - square style */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -57,11 +57,15 @@ html {
 
 ::-webkit-scrollbar-thumb {
   background: var(--primary-blue);
-  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-gold);
+}
+
+/* Remove all default rounded corners */
+* {
+  border-radius: 0 !important;
 }
 
 /* Animations */
@@ -80,16 +84,6 @@ html {
   to { opacity: 1; transform: translateX(0); }
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-}
-
-@keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(0, 36, 255, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(0, 36, 255, 0.6); }
-}
-
 .animate-fade-in {
   animation: fadeIn 0.6s ease-out forwards;
 }
@@ -100,14 +94,6 @@ html {
 
 .animate-slide-in-right {
   animation: slideInRight 0.6s ease-out forwards;
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
 }
 
 /* Utility Classes */
@@ -126,46 +112,13 @@ html {
   background-clip: text;
 }
 
-/* CSS Counter Utilities */
-.counter-reset-stats {
-  counter-reset: stat-counter;
+/* Sharp shadows for trustworthy feel */
+.shadow-sharp {
+  box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.1);
 }
 
-.counter-item-stat {
-  counter-increment: stat-counter;
-  position: relative;
-}
-
-.counter-item-stat::before {
-  content: counter(stat-counter, decimal-leading-zero);
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  font-family: ui-monospace, monospace;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #9ca3af;
-  opacity: 0.6;
-}
-
-/* Glass Effect */
-.glass-effect {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Shadow Utilities */
-.shadow-soft {
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-}
-
-.shadow-glow-blue {
-  box-shadow: 0 0 30px rgba(0, 36, 255, 0.15);
-}
-
-.shadow-glow-gold {
-  box-shadow: 0 0 30px rgba(255, 180, 29, 0.15);
+.shadow-strong {
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.15);
 }
 
 /* Respect reduced motion */

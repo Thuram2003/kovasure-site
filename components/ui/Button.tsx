@@ -16,7 +16,7 @@ function Button({
   children,
   ...props
 }: ButtonProps) {
-  const baseStyles = "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-semibold transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 outline-none cursor-pointer hover:-translate-y-0.5 active:translate-y-0 active:scale-95";
+  const baseStyles = "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-semibold transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 outline-none cursor-pointer hover:-translate-y-0.5 active:translate-y-0 active:scale-95";
   
   const variantStyles = {
     primary: "bg-[#0024ff] text-white hover:bg-blue-600 shadow-[0_4px_14px_0_rgba(0,36,255,0.35)] hover:shadow-[0_6px_20px_0_rgba(0,36,255,0.45)] border border-transparent",

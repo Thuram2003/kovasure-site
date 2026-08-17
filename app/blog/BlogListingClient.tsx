@@ -26,9 +26,9 @@ const categories = ["all", "risk", "industry", "global", "compliance"];
 
 function BlogCardSkeleton() {
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-lg border border-gray-100 dark:border-white/5 p-5 animate-pulse">
-      <div className="h-4 w-16 bg-gray-200 dark:bg-gray-800 rounded mb-3" />
-      <div className="h-36 bg-gray-100 dark:bg-gray-800 rounded-lg mb-4" />
+    <div className="bg-white dark:bg-gray-900 rounded-none border border-gray-100 dark:border-white/5 p-5 animate-pulse">
+      <div className="h-4 w-16 bg-gray-200 dark:bg-gray-800 mb-3" />
+      <div className="h-36 bg-gray-100 dark:bg-gray-800 rounded-none mb-4" />
       <div className="h-4 w-3/4 bg-gray-200 dark:bg-gray-800 rounded mb-2" />
       <div className="h-3 w-full bg-gray-100 dark:bg-gray-800/50 rounded mb-1" />
       <div className="h-3 w-2/3 bg-gray-100 dark:bg-gray-800/50 rounded" />
@@ -40,7 +40,7 @@ function EmptyState({ searchQuery, selectedCategory, onReset }: { searchQuery: s
   const hasFilters = searchQuery !== "" || selectedCategory !== "all";
 
   return (
-    <div className="text-center py-16 bg-white dark:bg-gray-900 rounded-lg border border-gray-100 dark:border-white/5">
+    <div className="text-center py-16 bg-white dark:bg-gray-900 rounded-none border border-gray-100 dark:border-white/5">
       <Article size={32} weight="bold" className="text-[#0024ff] mx-auto mb-3" />
       <h3 className="font-bold text-gray-900 dark:text-white mb-1">
         {hasFilters ? "No Matching Articles" : "No Posts Yet"}
@@ -54,7 +54,7 @@ function EmptyState({ searchQuery, selectedCategory, onReset }: { searchQuery: s
       {hasFilters && (
         <button
           onClick={onReset}
-          className="px-5 py-2.5 bg-[#0024ff] text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition-colors cursor-pointer border-none"
+          className="px-5 py-2.5 bg-[#0024ff] text-white text-sm font-semibold rounded-none hover:bg-blue-700 transition-colors cursor-pointer border-none"
         >
           Clear Filters
         </button>
@@ -117,7 +117,7 @@ export default function BlogListingClient({ posts, initialLoading = false }: Blo
             </div>
 
             <div className="relative">
-              <div className="relative h-[320px] w-full rounded-lg overflow-hidden shadow-lg">
+              <div className="relative h-[320px] w-full rounded-none overflow-hidden shadow-lg">
                 <Image
                   src="/personOffice.jpg"
                   alt="Blog resources"
@@ -141,7 +141,7 @@ export default function BlogListingClient({ posts, initialLoading = false }: Blo
               placeholder="Search articles..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-white/10 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#0024ff] text-sm"
+              className="w-full pl-10 pr-4 py-2.5 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-white/10 rounded-none text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#0024ff] text-sm"
             />
           </div>
 
@@ -150,7 +150,7 @@ export default function BlogListingClient({ posts, initialLoading = false }: Blo
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer border ${
+                className={`px-4 py-2 rounded-none text-sm font-medium transition-colors cursor-pointer border ${
                   selectedCategory === cat
                     ? "bg-[#0024ff] border-[#0024ff] text-white"
                     : "bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
@@ -183,7 +183,7 @@ export default function BlogListingClient({ posts, initialLoading = false }: Blo
               {filteredPosts.map((post) => (
                 <article
                   key={post.slug}
-                  className="bg-white dark:bg-gray-900 rounded-lg border border-gray-100 dark:border-white/5 overflow-hidden flex flex-col"
+                  className="bg-white dark:bg-gray-900 rounded-none border border-gray-100 dark:border-white/5 overflow-hidden flex flex-col"
                 >
                   <div className="p-5 pb-3">
                     <span className="text-[#0024ff] text-xs font-semibold uppercase">
@@ -191,7 +191,7 @@ export default function BlogListingClient({ posts, initialLoading = false }: Blo
                     </span>
                   </div>
 
-                  <div className="relative h-40 bg-gray-100 dark:bg-gray-800 mx-5 rounded-lg overflow-hidden">
+                  <div className="relative h-40 bg-gray-100 dark:bg-gray-800 mx-5 rounded-none overflow-hidden">
                     {post.image ? (
                       <Image
                         src={post.image}

@@ -1,96 +1,76 @@
 "use client";
 
-import { ArrowRight, Check } from "@phosphor-icons/react";
+import { ArrowRight, ShieldCheck } from "@phosphor-icons/react";
 import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-white dark:bg-[#030712]">
-      {/* Right half background */}
-      <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full bg-slate-50 dark:bg-gray-900/30" />
+    <section className="relative bg-white dark:bg-[#030712]">
+      {/* Full-width hero image background */}
+      <div className="relative h-[600px] lg:h-[700px]">
+        <Image
+          src="/cargo.jpg"
+          alt="Global cargo operations"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
+        
+        <div className="absolute inset-0 max-w-7xl mx-auto px-6 md:px-8 flex items-center">
+          <div className="max-w-2xl text-white">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 mb-6">
+              <ShieldCheck size={18} weight="bold" className="text-[#ffb41d]" />
+              <span className="text-sm font-medium">A+ Rated Insurance Protection</span>
+            </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 md:px-8 py-20 lg:py-28">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Content */}
-          <div className="relative z-10 max-w-xl">
-            <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-gray-900 dark:text-white leading-[1.1] mb-6">
-              Cargo Insurance <br />
-              <span className="text-[#0024ff]">That Actually Works</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+              Protect Your Cargo.<br />
+              <span className="text-[#ffb41d]">Secure Your Business.</span>
             </h1>
 
-            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              Instant quotes, policies bound in minutes, and claims settled in 48 hours. Cover for sea, air, and land worldwide.
+            <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed max-w-xl">
+              Comprehensive insurance coverage for sea, air, and land freight. Fast claims processing, transparent rates, global protection.
             </p>
 
-            <ul className="space-y-2.5 mb-8">
-              {[
-                "Instant digital policy certificates",
-                "48-hour claim settlements",
-                "All transport modes covered",
-              ].map((item) => (
-                <li key={item} className="flex items-center gap-2.5 text-sm text-gray-600 dark:text-gray-300">
-                  <Check size={16} weight="bold" className="text-[#0024ff] flex-shrink-0" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-
-            <div className="flex flex-wrap gap-4 mb-10">
+            <div className="flex flex-wrap gap-4">
               <a
                 href="/contact"
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#0024ff] text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#0024ff] text-white font-semibold hover:bg-blue-700 transition-colors"
               >
-                Get a Quote
-                <ArrowRight size={16} weight="bold" />
+                Get Instant Quote
+                <ArrowRight size={18} weight="bold" />
               </a>
               <a
-                href="/services#coverage"
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-800 dark:text-white rounded-lg font-semibold hover:border-[#0024ff] transition-colors"
+                href="/services"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-900 font-semibold hover:bg-gray-100 transition-colors"
               >
-                See Coverage
+                View Coverage Options
               </a>
             </div>
-
-            <div className="grid grid-cols-3 gap-6 border-t border-gray-200 dark:border-white/10 pt-6">
-              <div>
-                <div className="text-2xl font-bold text-gray-900 dark:text-white">5k+</div>
-                <div className="text-xs text-gray-500 mt-0.5">Shipments covered</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-gray-900 dark:text-white">100+</div>
-                <div className="text-xs text-gray-500 mt-0.5">Active clients</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-gray-900 dark:text-white">99.8%</div>
-                <div className="text-xs text-gray-500 mt-0.5">Claims paid</div>
-              </div>
-            </div>
           </div>
+        </div>
+      </div>
 
-          {/* Right Images */}
-          <div className="relative h-[420px] md:h-[500px] lg:h-[540px]">
-            {/* Blue accent shape */}
-            <div className="absolute top-8 right-0 w-[85%] h-[80%] bg-[#0024ff]/10 rounded-2xl" />
-
-            {/* Main image */}
-            <div className="absolute top-0 left-0 w-[82%] h-[72%] rounded-xl overflow-hidden shadow-lg">
-              <Image
-                src="/cargo.jpg"
-                alt="Cargo vessel at sea"
-                fill
-                className="object-cover"
-                priority
-              />
+      {/* Trust indicators bar */}
+      <div className="bg-gray-50 dark:bg-gray-950 border-y border-gray-200 dark:border-white/10">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 py-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">48hrs</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">Average Claim Settlement</div>
             </div>
-
-            {/* Overlapping image */}
-            <div className="absolute bottom-0 right-0 w-[60%] h-[50%] rounded-xl overflow-hidden shadow-lg border-4 border-white dark:border-[#030712]">
-              <Image
-                src="/cargoman.jpg"
-                alt="Container port operations"
-                fill
-                className="object-cover"
-              />
+            <div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">150+</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">Countries Covered</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">A+</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">Underwriter Rating</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">24/7</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">Claims Support</div>
             </div>
           </div>
         </div>
