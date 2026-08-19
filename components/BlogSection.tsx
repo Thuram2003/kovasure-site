@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Calendar, Clock, Article } from "@phosphor-icons/react";
+import { useTranslations } from "next-intl";
 
 export interface BlogPost {
   slug: string;
@@ -31,24 +32,27 @@ function BlogCardSkeleton({ index }: { index: number }) {
 }
 
 function EmptyBlogState() {
+  const t = useTranslations("Blog");
+  
   return (
     <div className="text-center py-16 bg-white dark:bg-gray-900 rounded-lg border border-gray-100 dark:border-white/5">
       <Article size={32} weight="bold" className="text-[#0024ff] mx-auto mb-3" />
-      <h3 className="font-bold text-gray-900 dark:text-white mb-1">No Posts Yet</h3>
+      <h3 className="font-bold text-gray-900 dark:text-white mb-1">{t("empty.title")}</h3>
       <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
-        Check back soon for cargo insurance insights.
+        {t("empty.subtitle")}
       </p>
       <Link
         href="/blog"
         className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#0024ff] text-white rounded-lg text-sm font-semibold hover:bg-blue-700 transition-colors"
       >
-        Explore Blog <ArrowRight size={14} weight="bold" />
+        {t("empty.cta")} <ArrowRight size={14} weight="bold" />
       </Link>
     </div>
   );
 }
 
 export default function BlogSection() {
+  const t = useTranslations("Blog");
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -76,17 +80,17 @@ export default function BlogSection() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">
-              Latest Insights
+              {t("title")}
             </h2>
             <p className="text-gray-600 dark:text-gray-400">
-              Cargo insurance, risk management, and trade updates.
+              {t("subtitle")}
             </p>
           </div>
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#0024ff] text-white text-sm font-semibold hover:bg-blue-700 transition-colors"
           >
-            View All <ArrowRight size={14} weight="bold" />
+            {t("viewAll")} <ArrowRight size={14} weight="bold" />
           </Link>
         </div>
 
@@ -154,7 +158,7 @@ export default function BlogSection() {
                     href={`/blog/${post.slug}`}
                     className="inline-flex items-center text-sm font-semibold text-[#0024ff] hover:text-blue-700 gap-1"
                   >
-                    Read Article <ArrowRight size={14} weight="bold" />
+                    {t("readArticle")} <ArrowRight size={14} weight="bold" />
                   </Link>
                 </div>
               </article>

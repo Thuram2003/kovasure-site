@@ -2,48 +2,50 @@
 
 import { FileText, CreditCard, ShieldCheck, CheckCircle } from "@phosphor-icons/react";
 import Image from "next/image";
-
-const steps = [
-  {
-    icon: FileText,
-    number: "01",
-    title: "Request Quote",
-    description: "Enter shipment details and cargo value. Get instant pricing.",
-    image: "/cargoman1.avif",
-  },
-  {
-    icon: CreditCard,
-    number: "02",
-    title: "Select Coverage",
-    description: "Choose protection level that matches your cargo risk.",
-    image: "/meeting.jpg",
-  },
-  {
-    icon: ShieldCheck,
-    number: "03",
-    title: "Receive Policy",
-    description: "Pay online and get your insurance certificate instantly.",
-    image: "/handshake.jpg",
-  },
-  {
-    icon: CheckCircle,
-    number: "04",
-    title: "Ship Protected",
-    description: "Your cargo is covered. File claims 24/7 if needed.",
-    image: "/shipment.jpg",
-  },
-];
+import { useTranslations } from "next-intl";
 
 export default function HowItWorksSection() {
+  const t = useTranslations("HowItWorks");
+  
+  const steps = [
+    {
+      icon: FileText,
+      numberKey: "step1.number",
+      titleKey: "step1.title",
+      descriptionKey: "step1.description",
+      image: "/cargoman1.avif",
+    },
+    {
+      icon: CreditCard,
+      numberKey: "step2.number",
+      titleKey: "step2.title",
+      descriptionKey: "step2.description",
+      image: "/meeting.jpg",
+    },
+    {
+      icon: ShieldCheck,
+      numberKey: "step3.number",
+      titleKey: "step3.title",
+      descriptionKey: "step3.description",
+      image: "/handshake.jpg",
+    },
+    {
+      icon: CheckCircle,
+      numberKey: "step4.number",
+      titleKey: "step4.title",
+      descriptionKey: "step4.description",
+      image: "/shipment.jpg",
+    },
+  ];
   return (
     <section id="how-it-works" className="py-20 bg-white dark:bg-[#030712] border-y border-gray-200 dark:border-white/10">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Simple Process,<br />Solid Protection
+            {t("title1")}<br />{t("title2")}
           </h2>
           <p className="text-gray-600 dark:text-gray-400 text-lg">
-            Four straightforward steps from quote to covered shipment.
+            {t("subtitle")}
           </p>
         </div>
 
@@ -57,14 +59,14 @@ export default function HowItWorksSection() {
               >
                 {/* Step number badge */}
                 <div className="absolute top-6 right-6 z-10 w-12 h-12 bg-[#0024ff] flex items-center justify-center text-white font-bold text-lg">
-                  {step.number}
+                  {t(step.numberKey)}
                 </div>
 
                 {/* Image */}
                 <div className="relative h-56 overflow-hidden">
                   <Image
                     src={step.image}
-                    alt={step.title}
+                    alt={t(step.titleKey)}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
@@ -78,10 +80,10 @@ export default function HowItWorksSection() {
                   </div>
 
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                    {step.title}
+                    {t(step.titleKey)}
                   </h3>
                   <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                    {step.description}
+                    {t(step.descriptionKey)}
                   </p>
                 </div>
               </div>
@@ -95,7 +97,7 @@ export default function HowItWorksSection() {
             href="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-[#0024ff] text-white font-semibold hover:bg-blue-700 transition-colors"
           >
-            Start Your Quote Now
+            {t("cta")}
           </a>
         </div>
       </div>

@@ -2,15 +2,17 @@
 
 import { CheckCircle } from "@phosphor-icons/react";
 import Image from "next/image";
-
-const features = [
-  "Real-time access to policy certificates and claims status",
-  "Manage all your cargo insurance in one secure portal",
-  "File claims with photo documentation in minutes",
-  "Instant notifications on policy updates and claim progress",
-];
+import { useTranslations } from "next-intl";
 
 export default function DownloadSection() {
+  const t = useTranslations("Download");
+  
+  const features = [
+    "feature1",
+    "feature2",
+    "feature3",
+    "feature4",
+  ];
   return (
     <section id="download" className="relative py-20 bg-white dark:bg-[#030712]">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
@@ -19,18 +21,18 @@ export default function DownloadSection() {
           <div className="space-y-6">
             <div>
               <div className="inline-block px-4 py-2 bg-[#0024ff]/10 border border-[#0024ff]/20 text-[#0024ff] text-sm font-semibold mb-4">
-                DIGITAL PLATFORM
+                {t("badge")}
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white leading-tight mb-4">
-                Manage Your Coverage<br />Anytime, Anywhere
+                {t("title1")}<br />{t("title2")}
               </h2>
               <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
-                Complete control over your cargo insurance. Track shipments, access documents, and handle claims from desktop or mobile.
+                {t("subtitle")}
               </p>
             </div>
 
             <ul className="space-y-4 border-l-4 border-[#0024ff] pl-6">
-              {features.map((feature, index) => (
+              {features.map((featureKey, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <CheckCircle
                     size={24}
@@ -38,7 +40,7 @@ export default function DownloadSection() {
                     className="text-[#0024ff] shrink-0 mt-0.5"
                   />
                   <span className="text-sm md:text-base text-gray-700 dark:text-gray-300 font-medium">
-                    {feature}
+                    {t(featureKey)}
                   </span>
                 </li>
               ))}
@@ -48,7 +50,7 @@ export default function DownloadSection() {
             <div className="flex flex-wrap gap-4 pt-4">
               <a
                 href="#"
-                aria-label="Download on the App Store"
+                aria-label={t("appStore.ariaLabel")}
                 className="inline-flex items-center gap-3 bg-black text-white px-6 py-3 hover:bg-gray-900 transition-colors"
               >
                 <img
@@ -58,15 +60,15 @@ export default function DownloadSection() {
                 />
                 <div className="leading-tight">
                   <span className="text-xs text-gray-300 block">
-                    Download on the
+                    {t("appStore.text1")}
                   </span>
-                  <span className="text-base font-bold">App Store</span>
+                  <span className="text-base font-bold">{t("appStore.text2")}</span>
                 </div>
               </a>
 
               <a
                 href="#"
-                aria-label="Get it on Google Play"
+                aria-label={t("googlePlay.ariaLabel")}
                 className="inline-flex items-center gap-3 bg-black text-white px-6 py-3 hover:bg-gray-900 transition-colors"
               >
                 <img
@@ -76,9 +78,9 @@ export default function DownloadSection() {
                 />
                 <div className="leading-tight">
                   <span className="text-xs text-gray-300 block">
-                    Get it on
+                    {t("googlePlay.text1")}
                   </span>
-                  <span className="text-base font-bold">Google Play</span>
+                  <span className="text-base font-bold">{t("googlePlay.text2")}</span>
                 </div>
               </a>
             </div>
@@ -90,7 +92,7 @@ export default function DownloadSection() {
               <div className="relative border border-gray-200 dark:border-white/10 overflow-hidden">
                 <Image
                   src="/man-meeting.jpg"
-                  alt="Cargo insurance management"
+                  alt={t("imageAlt1")}
                   fill
                   className="object-cover"
                 />
@@ -98,7 +100,7 @@ export default function DownloadSection() {
               <div className="relative border border-gray-200 dark:border-white/10 overflow-hidden">
                 <Image
                   src="/personOffice.jpg"
-                  alt="Insurance professional"
+                  alt={t("imageAlt2")}
                   fill
                   className="object-cover"
                 />
@@ -106,7 +108,7 @@ export default function DownloadSection() {
               <div className="relative col-span-2 border border-gray-200 dark:border-white/10 overflow-hidden">
                 <Image
                   src="/meeting.jpg"
-                  alt="Team collaboration"
+                  alt={t("imageAlt3")}
                   fill
                   className="object-cover"
                 />

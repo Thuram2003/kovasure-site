@@ -34,6 +34,373 @@
     "terms": "Terms of Service",
     "compliance": "Regulatory Compliance"
   },
+  "Hero": {
+    "badge": "A+ Rated Insurance Protection",
+    "title1": "Protect Your Cargo.",
+    "title2": "Secure Your Business.",
+    "subtitle": "Comprehensive insurance coverage for sea, air, and land freight. Fast claims processing, transparent rates, global protection.",
+    "cta1": "Get Instant Quote",
+    "cta2": "View Coverage Options",
+    "stat1Value": "48hrs",
+    "stat1Label": "Average Claim Settlement",
+    "stat2Value": "150+",
+    "stat2Label": "Countries Covered",
+    "stat3Value": "A+",
+    "stat3Label": "Underwriter Rating",
+    "stat4Value": "24/7",
+    "stat4Label": "Claims Support"
+  },
+  "Coverage": {
+    "title1": "Complete Coverage for",
+    "title2": "Every Transport Mode",
+    "subtitle": "From origin to final destination, your cargo is protected at every stage of the journey.",
+    "cta": "View Detailed Coverage",
+    "oceanFreight": {
+      "title": "Ocean Freight",
+      "description": "FCL and LCL shipments by sea. Coverage includes piracy, weather damage, and total loss."
+    },
+    "airFreight": {
+      "title": "Air Freight",
+      "description": "High-value and time-sensitive air cargo. Door-to-door protection with customs coverage."
+    },
+    "landTransport": {
+      "title": "Land Transport",
+      "description": "Road and rail freight coverage. Protection against accident, theft, and transit delays."
+    },
+    "warehousing": {
+      "title": "Warehousing",
+      "description": "Goods in storage at ports and facilities. Fire, theft, and natural disaster protection."
+    },
+    "multimodal": {
+      "title": "Multimodal",
+      "description": "Single policy for combined transport modes. Origin to destination across sea, air, and land."
+    },
+    "allRisk": {
+      "title": "All Risk Coverage",
+      "description": "Comprehensive protection against physical loss or damage from external causes."
+    }
+  },
+  "Benefits": {
+    "title1": "Why Logistics Companies",
+    "title2": "Choose Kovasure",
+    "subtitle": "Practical protection designed for real cargo operations.",
+    "fastQuote": {
+      "title": "Fast Quote Processing",
+      "description": "Clear pricing within minutes. No waiting days for a simple quote."
+    },
+    "transparentPricing": {
+      "title": "Transparent Pricing",
+      "description": "No hidden fees or surprise charges. Know your costs upfront."
+    },
+    "globalCoverage": {
+      "title": "Global Coverage",
+      "description": "Protection across 150+ countries with local claims adjusters."
+    },
+    "financialStrength": {
+      "title": "Financial Strength",
+      "description": "A+ rated underwriters. Your claims backed by solid capital."
+    },
+    "directSupport": {
+      "title": "Direct Support",
+      "description": "Account managers and claims handlers who actually respond."
+    },
+    "rapidClaims": {
+      "title": "Rapid Claims",
+      "description": "Most valid claims settled within 48 hours of documentation."
+    }
+  },
+  "HowItWorks": {
+    "title1": "Simple Process,",
+    "title2": "Solid Protection",
+    "subtitle": "Four straightforward steps from quote to covered shipment.",
+    "cta": "Start Your Quote Now",
+    "step1": {
+      "number": "01",
+      "title": "Request Quote",
+      "description": "Enter shipment details and cargo value. Get instant pricing."
+    },
+    "step2": {
+      "number": "02",
+      "title": "Select Coverage",
+      "description": "Choose protection level that matches your cargo risk."
+    },
+    "step3": {
+      "number": "03",
+      "title": "Receive Policy",
+      "description": "Pay online and get your insurance certificate instantly."
+    },
+    "step4": {
+      "number": "04",
+      "title": "Ship Protected",
+      "description": "Your cargo is covered. File claims 24/7 if needed."
+    }
+  },
+  "Trust": {
+    "title1": "Trusted by Logistics",
+    "title2": "Professionals Worldwide",
+    "subtitle": "Real feedback from freight forwarders, importers, and logistics companies.",
+    "testimonial1": {
+      "quote": "Kovasure handled our $2M cargo claim professionally. Settlement in 36 hours. No hassle, no delays.",
+      "author": "Marcus Chen",
+      "role": "Operations Director",
+      "company": "Global Freight Solutions"
+    },
+    "testimonial2": {
+      "quote": "Clear policies, transparent pricing, responsive team. Best cargo insurance partner we've worked with.",
+      "author": "Sarah Williams",
+      "role": "Supply Chain Manager",
+      "company": "TransOcean Logistics"
+    },
+    "testimonial3": {
+      "quote": "We ship 200+ containers monthly. Kovasure's annual policy saved us 40% versus per-shipment insurance.",
+      "author": "Ahmed Hassan",
+      "role": "CEO",
+      "company": "MidEast Cargo Lines"
+    },
+    "stat1": {
+      "value": "98%",
+      "label": "Client Satisfaction Rate"
+    },
+    "stat2": {
+      "value": "$2.5k+",
+      "label": "Cargo Value Insured"
+    },
+    "stat3": {
+      "value": "12K+",
+      "label": "Shipments Protected"
+    },
+    "stat4": {
+      "value": "48hrs",
+      "label": "Average Claim Time"
+    }
+  },
+  "Download": {
+    "badge": "DIGITAL PLATFORM",
+    "title1": "Manage Your Coverage",
+    "title2": "Anytime, Anywhere",
+    "subtitle": "Complete control over your cargo insurance. Track shipments, access documents, and handle claims from desktop or mobile.",
+    "feature1": "Real-time access to policy certificates and claims status",
+    "feature2": "Manage all your cargo insurance in one secure portal",
+    "feature3": "File claims with photo documentation in minutes",
+    "feature4": "Instant notifications on policy updates and claim progress",
+    "appStore": {
+      "ariaLabel": "Download on the App Store",
+      "text1": "Download on the",
+      "text2": "App Store"
+    },
+    "googlePlay": {
+      "ariaLabel": "Get it on Google Play",
+      "text1": "Get it on",
+      "text2": "Google Play"
+    },
+    "imageAlt1": "Cargo insurance management",
+    "imageAlt2": "Insurance professional",
+    "imageAlt3": "Team collaboration"
+  },
+  "FAQ": {
+    "title": "Common Questions",
+    "subtitle": "Clear answers about cargo insurance coverage. Need more information? Contact our team directly.",
+    "ctaText": "Still have questions?",
+    "ctaButton": "Contact Our Team",
+    "faq1": {
+      "question": "What types of cargo can be insured?",
+      "answer": "We cover most commercial cargo including electronics, machinery, textiles, food products, automotive parts, and general merchandise. Coverage is available for air, sea, and land transport worldwide."
+    },
+    "faq2": {
+      "question": "How quickly can I get a quote?",
+      "answer": "Most quotes are ready within 5 minutes. Simply enter your cargo value, route, and transport mode in our online form. You'll receive bindable pricing immediately."
+    },
+    "faq3": {
+      "question": "What risks are covered under All Risk insurance?",
+      "answer": "All Risk policies cover physical loss or damage from external causes including fire, theft, collision, sinking, derailment, natural disasters, and accidents during loading/unloading. Named-peril options available for lower premiums."
+    },
+    "faq4": {
+      "question": "How do I file a claim?",
+      "answer": "File claims online, by email, or phone 24/7. Submit documentation of the loss (photos, commercial invoice, packing list, transport documents). Our claims team will guide you through the process. Most valid claims settle within 48 hours."
+    },
+    "faq5": {
+      "question": "Is there a minimum shipment value?",
+      "answer": "We insure shipments from $1,000 up to $10 million per shipment. For values above $10 million, please contact our underwriting team for special arrangements."
+    },
+    "faq6": {
+      "question": "Do you offer annual policies for frequent shippers?",
+      "answer": "Yes. We offer annual open cargo policies covering multiple shipments throughout the year. This is more economical than insuring each shipment separately and provides automatic coverage for qualifying shipments."
+    }
+  },
+  "Blog": {
+    "title": "Latest Insights",
+    "subtitle": "Cargo insurance, risk management, and trade updates.",
+    "viewAll": "View All",
+    "readArticle": "Read Article",
+    "empty": {
+      "title": "No Posts Yet",
+      "subtitle": "Check back soon for cargo insurance insights.",
+      "cta": "Explore Blog"
+    }
+  },
+  "About": {
+    "hero": {
+      "title1": "Protecting Global Trade",
+      "title2": "Since 2024",
+      "subtitle": "Cargo insurance built for logistics companies, freight forwarders, and importers who need cover that actually pays out.",
+      "cta1": "Our Story",
+      "cta2": "Contact Us",
+      "imageAlt1": "Port operations",
+      "imageAlt2": "Cargo vessel",
+      "imageAlt3": "Land transport"
+    },
+    "stats": {
+      "stat1": {
+        "value": "50+",
+        "label": "Countries Covered"
+      },
+      "stat2": {
+        "value": "12K+",
+        "label": "Shipments Covered"
+      },
+      "stat3": {
+        "value": "98%",
+        "label": "Claims Paid"
+      },
+      "stat4": {
+        "value": "48 hrs",
+        "label": "Avg. Settlement"
+      }
+    },
+    "whoWeAre": {
+      "title": "Who We Are",
+      "subtitle": "What drives us and how we work with shippers and forwarders every day.",
+      "imageAlt": "Team discussing cargo coverage"
+    },
+    "tabs": {
+      "mission": "Mission",
+      "vision": "Vision",
+      "values": "Values"
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To make cargo insurance simple, fast, and fair. Every shipper should know exactly what they are covered for and get paid quickly when something goes wrong. No jargon, no runaround."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "A world where cargo cover is as standard as shipping labels. Where a small business in Douala has the same access to protection as a multinational in Rotterdam. We are building the infrastructure to make that happen."
+    },
+    "values": {
+      "value1": {
+        "title": "Trust & Reliability",
+        "description": "We do what we say. Clear terms, no surprises at claim time."
+      },
+      "value2": {
+        "title": "Practical Innovation",
+        "description": "Digital quoting and claims so you spend less time on paperwork."
+      },
+      "value3": {
+        "title": "Customer First",
+        "description": "Coverage built around your routes, not a one-size-fits-all policy."
+      },
+      "value4": {
+        "title": "Global Reach",
+        "description": "Cover that works across major trade lanes and ports worldwide."
+      }
+    },
+    "operate": {
+      "title": "How We Operate",
+      "subtitle": "Four commitments that shape every policy we write."
+    },
+    "pillars": {
+      "pillar1": {
+        "title": "A+ Rated Backing",
+        "description": "Policies underwritten by leading global carriers with strong solvency ratings."
+      },
+      "pillar2": {
+        "title": "Regulatory Compliance",
+        "description": "We handle maritime, air, and cross-border rules so your cargo stays compliant."
+      },
+      "pillar3": {
+        "title": "Fast Settlements",
+        "description": "Digital claims infrastructure. Most valid claims paid within 48 hours of documentation."
+      },
+      "pillar4": {
+        "title": "Smart Underwriting",
+        "description": "Risk models tuned to specific lanes, vessels, and cargo types to keep premiums fair."
+      }
+    },
+    "team": {
+      "title": "Built by people who understand trade",
+      "subtitle": "Our team combines insurance expertise with real logistics experience. We know the pressure of moving cargo on time and the cost of delays when cover is unclear.",
+      "item1": "Dedicated account managers",
+      "item2": "Claims handlers who respond",
+      "item3": "Underwriters focused on cargo risk",
+      "item4": "Local knowledge on major trade lanes",
+      "imageAlt1": "Team collaboration",
+      "imageAlt2": "Specialist at work",
+      "imageAlt3": "Operations on the ground"
+    },
+    "cta": {
+      "title": "Ready to work with us?",
+      "subtitle": "Talk to a cargo insurance specialist about your routes and risk profile. Clear answers, no pressure.",
+      "button1": "Contact Us",
+      "button2": "View Services",
+      "imageAlt": "Protecting cargo worldwide"
+    }
+  },
+  "Contact": {
+    "imageAlt": "Get in touch with Kovasure",
+    "title": "Get in Touch",
+    "subtitle": "Questions about cargo insurance? Our team is here to help.",
+    "info": {
+      "address": {
+        "label": "Headquarters",
+        "value": "4 Etage, Bonaberi, Douala, Cameroon"
+      },
+      "phone": {
+        "label": "Phone",
+        "value": "+237 677 77 77 77"
+      },
+      "email": {
+        "label": "Email",
+        "value": "support@kovasure.com"
+      },
+      "hours": {
+        "label": "Business Hours",
+        "value": "Mon - Fri, 9:00 AM - 6:00 PM GMT"
+      },
+      "responseTime": "We typically respond within 24 hours on business days."
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "subtitle": "Fill out the form and we'll get back to you soon.",
+      "fields": {
+        "name": "Full Name *",
+        "email": "Email *",
+        "phone": "Phone",
+        "company": "Company",
+        "subject": "Subject *",
+        "message": "Message *"
+      },
+      "placeholders": {
+        "name": "John Doe",
+        "email": "john@company.com",
+        "phone": "+1 234 567 8900",
+        "company": "Your Company Ltd",
+        "message": "Tell us about your cargo, route, and what you need covered..."
+      },
+      "subjects": {
+        "quote": "Request a Quote",
+        "claim": "Claims Support",
+        "coverage": "Coverage Inquiry",
+        "support": "General Support",
+        "partnership": "Partnership"
+      },
+      "submit": "Send Message",
+      "submitting": "Sending..."
+    },
+    "success": {
+      "title": "Message Sent Successfully",
+      "subtitle": "We've received your message and will respond shortly.",
+      "button": "Send Another Message"
+    }
+  },
   "Services": {
     "hero": {
       "title1": "Insurance for",

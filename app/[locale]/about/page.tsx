@@ -21,60 +21,62 @@ import {
   Check,
   Users,
 } from "@phosphor-icons/react";
+import { useTranslations } from "next-intl";
 
 export default function AboutPage() {
+  const t = useTranslations("About");
   const [activeTab, setActiveTab] = useState<"mission" | "vision" | "values">("mission");
 
   const stats = [
-    { value: "50+", label: "Countries Covered", icon: Globe },
-    { value: "12K+", label: "Shipments Covered", icon: Shield },
-    { value: "98%", label: "Claims Paid", icon: Medal },
-    { value: "48 hrs", label: "Avg. Settlement", icon: Clock },
+    { valueKey: "stats.stat1.value", labelKey: "stats.stat1.label", icon: Globe },
+    { valueKey: "stats.stat2.value", labelKey: "stats.stat2.label", icon: Shield },
+    { valueKey: "stats.stat3.value", labelKey: "stats.stat3.label", icon: Medal },
+    { valueKey: "stats.stat4.value", labelKey: "stats.stat4.label", icon: Clock },
   ];
 
   const values = [
     {
       icon: Shield,
-      title: "Trust & Reliability",
-      description: "We do what we say. Clear terms, no surprises at claim time.",
+      titleKey: "values.value1.title",
+      descriptionKey: "values.value1.description",
     },
     {
       icon: TrendUp,
-      title: "Practical Innovation",
-      description: "Digital quoting and claims so you spend less time on paperwork.",
+      titleKey: "values.value2.title",
+      descriptionKey: "values.value2.description",
     },
     {
       icon: Heart,
-      title: "Customer First",
-      description: "Coverage built around your routes, not a one-size-fits-all policy.",
+      titleKey: "values.value3.title",
+      descriptionKey: "values.value3.description",
     },
     {
       icon: Globe,
-      title: "Global Reach",
-      description: "Cover that works across major trade lanes and ports worldwide.",
+      titleKey: "values.value4.title",
+      descriptionKey: "values.value4.description",
     },
   ];
 
   const pillars = [
     {
       icon: ShieldCheck,
-      title: "A+ Rated Backing",
-      description: "Policies underwritten by leading global carriers with strong solvency ratings.",
+      titleKey: "pillars.pillar1.title",
+      descriptionKey: "pillars.pillar1.description",
     },
     {
       icon: Compass,
-      title: "Regulatory Compliance",
-      description: "We handle maritime, air, and cross-border rules so your cargo stays compliant.",
+      titleKey: "pillars.pillar2.title",
+      descriptionKey: "pillars.pillar2.description",
     },
     {
       icon: Clock,
-      title: "Fast Settlements",
-      description: "Digital claims infrastructure. Most valid claims paid within 48 hours of documentation.",
+      titleKey: "pillars.pillar3.title",
+      descriptionKey: "pillars.pillar3.description",
     },
     {
       icon: Building,
-      title: "Smart Underwriting",
-      description: "Risk models tuned to specific lanes, vessels, and cargo types to keep premiums fair.",
+      titleKey: "pillars.pillar4.title",
+      descriptionKey: "pillars.pillar4.description",
     },
   ];
 
@@ -89,18 +91,18 @@ export default function AboutPage() {
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div className="max-w-xl">
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white leading-tight mb-5">
-                  Protecting Global Trade <br />
-                  <span className="text-[#0024ff]">Since 2024</span>
+                  {t("hero.title1")} <br />
+                  <span className="text-[#0024ff]">{t("hero.title2")}</span>
                 </h1>
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                  Cargo insurance built for logistics companies, freight forwarders, and importers who need cover that actually pays out.
+                  {t("hero.subtitle")}
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button variant="primary" size="lg" href="#story">
-                    Our Story
+                    {t("hero.cta1")}
                   </Button>
                   <Button variant="outline" size="lg" href="/contact">
-                    Contact Us
+                    {t("hero.cta2")}
                   </Button>
                 </div>
               </div>
@@ -109,7 +111,7 @@ export default function AboutPage() {
                 <div className="relative col-span-2 border border-gray-200 dark:border-white/10 overflow-hidden">
                   <Image
                     src="/portview.jpg"
-                    alt="Port operations"
+                    alt={t("hero.imageAlt1")}
                     fill
                     className="object-cover"
                     priority
@@ -118,7 +120,7 @@ export default function AboutPage() {
                 <div className="relative h-full border border-gray-200 dark:border-white/10 overflow-hidden">
                   <Image
                     src="/ship.webp"
-                    alt="Cargo vessel"
+                    alt={t("hero.imageAlt2")}
                     fill
                     className="object-cover"
                   />
@@ -126,7 +128,7 @@ export default function AboutPage() {
                 <div className="relative h-full border border-gray-200 dark:border-white/10 overflow-hidden">
                   <Image
                     src="/trucks.jpg"
-                    alt="Land transport"
+                    alt={t("hero.imageAlt3")}
                     fill
                     className="object-cover"
                   />
@@ -151,10 +153,10 @@ export default function AboutPage() {
                       <Icon size={20} weight="bold" />
                     </div>
                     <div className="text-2xl md:text-3xl font-bold text-[#0024ff] mb-1">
-                      {stat.value}
+                      {t(stat.valueKey)}
                     </div>
                     <div className="text-sm text-gray-600 dark:text-gray-400">
-                      {stat.label}
+                      {t(stat.labelKey)}
                     </div>
                   </div>
                 );
@@ -168,19 +170,19 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto">
             <div className="max-w-2xl mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                Who We Are
+                {t("whoWeAre.title")}
               </h2>
               <p className="text-gray-600 dark:text-gray-400 text-lg">
-                What drives us and how we work with shippers and forwarders every day.
+                {t("whoWeAre.subtitle")}
               </p>
             </div>
 
             {/* Tabs */}
             <div className="flex flex-wrap gap-3 mb-8">
               {[
-                { key: "mission", label: "Mission", icon: Target },
-                { key: "vision", label: "Vision", icon: Eye },
-                { key: "values", label: "Values", icon: Heart },
+                { key: "mission", labelKey: "tabs.mission", icon: Target },
+                { key: "vision", labelKey: "tabs.vision", icon: Eye },
+                { key: "values", labelKey: "tabs.values", icon: Heart },
               ].map((tab) => {
                 const Icon = tab.icon;
                 return (
@@ -193,7 +195,7 @@ export default function AboutPage() {
                       }`}
                   >
                     <Icon size={18} weight="bold" />
-                    {tab.label}
+                    {t(tab.labelKey)}
                   </button>
                 );
               })}
@@ -208,11 +210,11 @@ export default function AboutPage() {
                         <Target size={20} weight="bold" />
                       </div>
                       <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                        Our Mission
+                        {t("mission.title")}
                       </h3>
                     </div>
                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                      To make cargo insurance simple, fast, and fair. Every shipper should know exactly what they are covered for and get paid quickly when something goes wrong. No jargon, no runaround.
+                      {t("mission.description")}
                     </p>
                   </div>
                 )}
@@ -224,11 +226,11 @@ export default function AboutPage() {
                         <Eye size={20} weight="bold" />
                       </div>
                       <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                        Our Vision
+                        {t("vision.title")}
                       </h3>
                     </div>
                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                      A world where cargo cover is as standard as shipping labels. Where a small business in Douala has the same access to protection as a multinational in Rotterdam. We are building the infrastructure to make that happen.
+                      {t("vision.description")}
                     </p>
                   </div>
                 )}
@@ -242,11 +244,11 @@ export default function AboutPage() {
                           <div className="flex items-center gap-2">
                             <Icon size={18} weight="bold" className="text-[#0024ff]" />
                             <h4 className="font-bold text-gray-900 dark:text-white">
-                              {value.title}
+                              {t(value.titleKey)}
                             </h4>
                           </div>
                           <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                            {value.description}
+                            {t(value.descriptionKey)}
                           </p>
                         </div>
                       );
@@ -258,7 +260,7 @@ export default function AboutPage() {
               <div className="relative h-80 lg:h-full min-h-[320px] border border-gray-200 dark:border-white/10 overflow-hidden">
                 <Image
                   src="/meeting.avif"
-                  alt="Team discussing cargo coverage"
+                  alt={t("whoWeAre.imageAlt")}
                   fill
                   className="object-cover"
                 />
@@ -272,10 +274,10 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto">
             <div className="max-w-2xl mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                How We Operate
+                {t("operate.title")}
               </h2>
               <p className="text-blue-100 text-lg">
-                Four commitments that shape every policy we write.
+                {t("operate.subtitle")}
               </p>
             </div>
 
@@ -290,9 +292,9 @@ export default function AboutPage() {
                     <div className="w-10 h-10 bg-white/15 flex items-center justify-center text-[#ffb41d] mb-4">
                       <Icon size={22} weight="bold" />
                     </div>
-                    <h3 className="text-xl font-bold mb-2">{pillar.title}</h3>
+                    <h3 className="text-xl font-bold mb-2">{t(pillar.titleKey)}</h3>
                     <p className="text-sm text-blue-100 leading-relaxed">
-                      {pillar.description}
+                      {t(pillar.descriptionKey)}
                     </p>
                   </div>
                 );
@@ -307,24 +309,24 @@ export default function AboutPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                  Built by people who understand trade
+                  {t("team.title")}
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400 text-lg mb-6 leading-relaxed">
-                  Our team combines insurance expertise with real logistics experience. We know the pressure of moving cargo on time and the cost of delays when cover is unclear.
+                  {t("team.subtitle")}
                 </p>
                 <ul className="space-y-3">
                   {[
-                    "Dedicated account managers",
-                    "Claims handlers who respond",
-                    "Underwriters focused on cargo risk",
-                    "Local knowledge on major trade lanes",
-                  ].map((item) => (
+                    "team.item1",
+                    "team.item2",
+                    "team.item3",
+                    "team.item4",
+                  ].map((itemKey) => (
                     <li
-                      key={item}
+                      key={itemKey}
                       className="flex items-center gap-2.5 text-sm text-gray-700 dark:text-gray-300"
                     >
                       <Check size={16} weight="bold" className="text-[#0024ff]" />
-                      {item}
+                      {t(itemKey)}
                     </li>
                   ))}
                 </ul>
@@ -334,7 +336,7 @@ export default function AboutPage() {
                 <div className="relative h-56 border border-gray-200 dark:border-white/10 overflow-hidden">
                   <Image
                     src="/man-woman.jpg"
-                    alt="Team collaboration"
+                    alt={t("team.imageAlt1")}
                     fill
                     className="object-cover"
                   />
@@ -342,7 +344,7 @@ export default function AboutPage() {
                 <div className="relative h-56 border border-gray-200 dark:border-white/10 overflow-hidden">
                   <Image
                     src="/personOffice.jpg"
-                    alt="Specialist at work"
+                    alt={t("team.imageAlt2")}
                     fill
                     className="object-cover"
                   />
@@ -350,7 +352,7 @@ export default function AboutPage() {
                 <div className="relative h-48 col-span-2 border border-gray-200 dark:border-white/10 overflow-hidden">
                   <Image
                     src="/meeting.jpg"
-                    alt="Operations on the ground"
+                    alt={t("team.imageAlt3")}
                     fill
                     className="object-cover"
                   />
@@ -404,7 +406,7 @@ export default function AboutPage() {
               <div className="relative h-72 border border-gray-200 dark:border-white/10 overflow-hidden">
                 <Image
                   src="/image1.jpg"
-                  alt="Protecting cargo worldwide"
+                  alt={t("cta.imageAlt")}
                   fill
                   className="object-cover"
                 />
@@ -412,17 +414,17 @@ export default function AboutPage() {
               <div>
                 <Users size={36} weight="bold" className="text-[#0024ff] mb-4" />
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                  Ready to work with us?
+                  {t("cta.title")}
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400 mb-8">
-                  Talk to a cargo insurance specialist about your routes and risk profile. Clear answers, no pressure.
+                  {t("cta.subtitle")}
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button variant="primary" size="lg" href="/contact">
-                    Contact Us
+                    {t("cta.button1")}
                   </Button>
                   <Button variant="outline" size="lg" href="/services">
-                    View Services
+                    {t("cta.button2")}
                   </Button>
                 </div>
               </div>

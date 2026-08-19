@@ -2,8 +2,11 @@
 
 import { ArrowRight, ShieldCheck } from "@phosphor-icons/react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function HeroSection() {
+  const t = useTranslations("Hero");
+  
   return (
     <section className="relative bg-white dark:bg-[#030712]">
       {/* Full-width hero image background */}
@@ -21,16 +24,16 @@ export default function HeroSection() {
           <div className="max-w-2xl text-white">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 mb-6">
               <ShieldCheck size={18} weight="bold" className="text-[#ffb41d]" />
-              <span className="text-sm font-medium">A+ Rated Insurance Protection</span>
+              <span className="text-sm font-medium">{t("badge")}</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Protect Your Cargo.<br />
-              <span className="text-[#ffb41d]">Secure Your Business.</span>
+              {t("title1")}<br />
+              <span className="text-[#ffb41d]">{t("title2")}</span>
             </h1>
 
             <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed max-w-xl">
-              Comprehensive insurance coverage for sea, air, and land freight. Fast claims processing, transparent rates, global protection.
+              {t("subtitle")}
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -38,14 +41,14 @@ export default function HeroSection() {
                 href="/contact"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-[#0024ff] text-white font-semibold hover:bg-blue-700 transition-colors"
               >
-                Get Instant Quote
+                {t("cta1")}
                 <ArrowRight size={18} weight="bold" />
               </a>
               <a
                 href="/services"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-900 font-semibold hover:bg-gray-100 transition-colors"
               >
-                View Coverage Options
+                {t("cta2")}
               </a>
             </div>
           </div>
@@ -57,20 +60,20 @@ export default function HeroSection() {
         <div className="max-w-7xl mx-auto px-6 md:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">48hrs</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Average Claim Settlement</div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">{t("stat1Value")}</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">{t("stat1Label")}</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">150+</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Countries Covered</div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">{t("stat2Value")}</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">{t("stat2Label")}</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">A+</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Underwriter Rating</div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">{t("stat3Value")}</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">{t("stat3Label")}</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">24/7</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Claims Support</div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">{t("stat4Value")}</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">{t("stat4Label")}</div>
             </div>
           </div>
         </div>
