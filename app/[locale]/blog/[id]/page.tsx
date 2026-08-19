@@ -5,11 +5,20 @@ import BlogArticleClient from "./BlogArticleClient";
 export const revalidate = 60; // Revalidate dynamic content every 60 seconds
 
 export async function generateStaticParams() {
-    // Generate static params for static fallback routes
-    return blogArticles.map((article) => ({ id: article.slug }));
+    // Generate static params for both locales
+    const locales = ['en', 'fr'];
+    const params = [];
+    
+    for (const locale of locales) {
+        for (const article of blogArticles) {
+            params.push({ locale, id: article.slug });
+        }
+    }
+    
+    return params;
 }
 
-export default async function BlogArticlePage({ params }: { params: Promise<{ id: string }> }) {
+export default async function BlogArticlePage({ params }: { params: Promise<{ locale: string; id: string }> }) {
     const { id } = await params;
     
     let initialPost = null;

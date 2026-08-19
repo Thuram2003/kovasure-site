@@ -34,6 +34,320 @@
     "terms": "Conditions d'Utilisation",
     "compliance": "Conformité Réglementaire"
   },
+  "Hero": {
+    "badge": "Protection d'Assurance Notée A+",
+    "title1": "Protégez Votre Cargaison.",
+    "title2": "Sécurisez Votre Entreprise.",
+    "subtitle": "Couverture d'assurance complète pour le fret maritime, aérien et terrestre. Traitement rapide des sinistres, tarifs transparents, protection mondiale.",
+    "cta1": "Obtenir un Devis Instantané",
+    "cta2": "Voir les Options de Couverture",
+    "stat1Value": "48h",
+    "stat1Label": "Règlement Moyen des Sinistres",
+    "stat2Value": "150+",
+    "stat2Label": "Pays Couverts",
+    "stat3Value": "A+",
+    "stat3Label": "Notation des Assureurs",
+    "stat4Value": "24/7",
+    "stat4Label": "Support Sinistres"
+  },
+  "Coverage": {
+    "title1": "Couverture Complète pour",
+    "title2": "Chaque Mode de Transport",
+    "subtitle": "De l'origine à la destination finale, votre cargaison est protégée à chaque étape du voyage.",
+    "cta": "Voir la Couverture Détaillée",
+    "oceanFreight": {
+      "title": "Fret Maritime",
+      "description": "Expéditions FCL et LCL par mer. Couvre la piraterie, les dommages météorologiques et la perte totale."
+    },
+    "airFreight": {
+      "title": "Fret Aérien",
+      "description": "Cargo aérien de haute valeur et urgent. Protection porte-à-porte avec couverture douanière."
+    },
+    "landTransport": {
+      "title": "Transport Terrestre",
+      "description": "Couverture fret routier et ferroviaire. Protection contre les accidents, le vol et les retards de transit."
+    },
+    "warehousing": {
+      "title": "Entreposage",
+      "description": "Marchandises stockées dans les ports et installations. Protection contre l'incendie, le vol et les catastrophes naturelles."
+    },
+    "multimodal": {
+      "title": "Multimodal",
+      "description": "Police unique pour modes de transport combinés. De l'origine à la destination par mer, air et terre."
+    },
+    "allRisk": {
+      "title": "Couverture Tous Risques",
+      "description": "Protection complète contre la perte physique ou les dommages causés par des causes externes."
+    }
+  },
+  "Benefits": {
+    "title1": "Pourquoi les Entreprises Logistiques",
+    "title2": "Choisissent Kovasure",
+    "subtitle": "Protection pratique conçue pour les opérations cargo réelles.",
+    "fastQuote": {
+      "title": "Devis Rapide",
+      "description": "Tarification claire en quelques minutes. Pas d'attente de plusieurs jours pour un simple devis."
+    },
+    "transparentPricing": {
+      "title": "Tarification Transparente",
+      "description": "Pas de frais cachés ni de charges surprises. Connaissez vos coûts à l'avance."
+    },
+    "globalCoverage": {
+      "title": "Couverture Mondiale",
+      "description": "Protection dans plus de 150 pays avec des experts sinistres locaux."
+    },
+    "financialStrength": {
+      "title": "Solidité Financière",
+      "description": "Assureurs notés A+. Vos sinistres soutenus par un capital solide."
+    },
+    "directSupport": {
+      "title": "Support Direct",
+      "description": "Gestionnaires de compte et agents sinistres qui répondent réellement."
+    },
+    "rapidClaims": {
+      "title": "Sinistres Rapides",
+      "description": "La plupart des sinistres valides réglés dans les 48 heures après documentation."
+    }
+  },
+  "HowItWorks": {
+    "title1": "Processus Simple,",
+    "title2": "Protection Solide",
+    "subtitle": "Quatre étapes simples du devis à l'expédition couverte.",
+    "cta": "Commencer Votre Devis Maintenant",
+    "step1": {
+      "number": "01",
+      "title": "Demander un Devis",
+      "description": "Entrez les détails de l'expédition et la valeur du cargo. Obtenez une tarification instantanée."
+    },
+    "step2": {
+      "number": "02",
+      "title": "Choisir la Couverture",
+      "description": "Sélectionnez le niveau de protection qui correspond au risque de votre cargo."
+    },
+    "step3": {
+      "number": "03",
+      "title": "Recevoir la Police",
+      "description": "Payez en ligne et obtenez votre certificat d'assurance instantanément."
+    },
+    "step4": {
+      "number": "04",
+      "title": "Expédier en Toute Sécurité",
+      "description": "Votre cargo est couvert. Déclarez des sinistres 24/7 si nécessaire."
+    }
+  },
+  "Trust": {
+    "title1": "Approuvé par les Professionnels",
+    "title2": "de la Logistique Mondiale",
+    "subtitle": "Retours réels de transitaires, importateurs et entreprises logistiques.",
+    "testimonial1": {
+      "quote": "Kovasure a traité notre sinistre de 2 M$ de manière professionnelle. Règlement en 36 heures. Pas de tracas, pas de retards.",
+      "author": "Marcus Chen",
+      "role": "Directeur des Opérations",
+      "company": "Global Freight Solutions"
+    },
+    "testimonial2": {
+      "quote": "Polices claires, tarification transparente, équipe réactive. Meilleur partenaire d'assurance cargo avec qui nous avons travaillé.",
+      "author": "Sarah Williams",
+      "role": "Responsable Supply Chain",
+      "company": "TransOcean Logistics"
+    },
+    "testimonial3": {
+      "quote": "Nous expédions plus de 200 conteneurs par mois. La police annuelle de Kovasure nous a fait économiser 40% par rapport à l'assurance par expédition.",
+      "author": "Ahmed Hassan",
+      "role": "PDG",
+      "company": "MidEast Cargo Lines"
+    },
+    "stat1Value": "98%",
+    "stat1Label": "Taux de Satisfaction Client",
+    "stat2Value": "2,5k+",
+    "stat2Label": "Valeur Cargo Assurée",
+    "stat3Value": "12K+",
+    "stat3Label": "Expéditions Protégées",
+    "stat4Value": "48h",
+    "stat4Label": "Temps Moyen Sinistres"
+  },
+  "Download": {
+    "badge": "PLATEFORME DIGITALE",
+    "title1": "Gérez Votre Couverture",
+    "title2": "N'importe Quand, N'importe Où",
+    "subtitle": "Contrôle total sur votre assurance cargo. Suivez les expéditions, accédez aux documents et gérez les sinistres depuis un ordinateur ou mobile.",
+    "feature1": "Accès en temps réel aux certificats de police et statut des sinistres",
+    "feature2": "Gérez toute votre assurance cargo dans un portail sécurisé",
+    "feature3": "Déclarez des sinistres avec documentation photo en quelques minutes",
+    "feature4": "Notifications instantanées sur les mises à jour de police et l'avancement des sinistres",
+    "appStore1": "Télécharger sur",
+    "appStore2": "App Store",
+    "playStore1": "Disponible sur",
+    "playStore2": "Google Play"
+  },
+  "FAQ": {
+    "title": "Questions Fréquentes",
+    "subtitle": "Réponses claires sur la couverture d'assurance cargo. Besoin de plus d'informations ? Contactez notre équipe directement.",
+    "cta": "Contacter Notre Équipe",
+    "stillHaveQuestions": "Vous avez encore des questions ?",
+    "q1": {
+      "question": "Quels types de cargo peuvent être assurés ?",
+      "answer": "Nous couvrons la plupart des cargos commerciaux incluant l'électronique, les machines, les textiles, les produits alimentaires, les pièces automobiles et la marchandise générale. La couverture est disponible pour le transport aérien, maritime et terrestre dans le monde entier."
+    },
+    "q2": {
+      "question": "Combien de temps pour obtenir un devis ?",
+      "answer": "La plupart des devis sont prêts en 5 minutes. Entrez simplement la valeur du cargo, l'itinéraire et le mode de transport dans notre formulaire en ligne. Vous recevrez une tarification immédiate."
+    },
+    "q3": {
+      "question": "Quels risques sont couverts par l'assurance Tous Risques ?",
+      "answer": "Les polices Tous Risques couvrent la perte physique ou les dommages causés par des causes externes incluant l'incendie, le vol, la collision, le naufrage, le déraillement, les catastrophes naturelles et les accidents lors du chargement/déchargement. Des options de risques nommés sont disponibles pour des primes plus basses."
+    },
+    "q4": {
+      "question": "Comment déclarer un sinistre ?",
+      "answer": "Déclarez les sinistres en ligne, par email ou par téléphone 24/7. Soumettez la documentation de la perte (photos, facture commerciale, liste de colisage, documents de transport). Notre équipe sinistres vous guidera dans le processus. La plupart des sinistres valides sont réglés dans les 48 heures."
+    },
+    "q5": {
+      "question": "Y a-t-il une valeur minimum d'expédition ?",
+      "answer": "Nous assurons les expéditions de 1 000 $ jusqu'à 10 millions $ par expédition. Pour les valeurs supérieures à 10 millions $, veuillez contacter notre équipe de souscription pour des arrangements spéciaux."
+    },
+    "q6": {
+      "question": "Proposez-vous des polices annuelles pour les expéditeurs fréquents ?",
+      "answer": "Oui. Nous proposons des polices cargo ouvertes annuelles couvrant plusieurs expéditions tout au long de l'année. C'est plus économique que d'assurer chaque expédition séparément et fournit une couverture automatique pour les expéditions qualifiées."
+    }
+  },
+  "Blog": {
+    "title": "Dernières Perspectives",
+    "subtitle": "Assurance cargo, gestion des risques et actualités du commerce.",
+    "viewAll": "Voir Tout",
+    "readArticle": "Lire l'Article",
+    "noPostsTitle": "Pas Encore d'Articles",
+    "noPostsDesc": "Revenez bientôt pour des insights sur l'assurance cargo.",
+    "exploreBlog": "Explorer le Blog"
+  },
+  "About": {
+    "hero": {
+      "title1": "Protéger le Commerce Mondial",
+      "title2": "Depuis 2024",
+      "subtitle": "Assurance cargo conçue pour les entreprises logistiques, transitaires et importateurs qui ont besoin d'une couverture qui paie réellement.",
+      "cta1": "Notre Histoire",
+      "cta2": "Nous Contacter"
+    },
+    "stats": {
+      "stat1Value": "50+",
+      "stat1Label": "Pays Couverts",
+      "stat2Value": "12K+",
+      "stat2Label": "Expéditions Couvertes",
+      "stat3Value": "98%",
+      "stat3Label": "Sinistres Payés",
+      "stat4Value": "48 h",
+      "stat4Label": "Règlement Moyen"
+    },
+    "whoWeAre": {
+      "title": "Qui Nous Sommes",
+      "subtitle": "Ce qui nous motive et comment nous travaillons avec les expéditeurs et transitaires chaque jour.",
+      "mission": "Mission",
+      "vision": "Vision",
+      "values": "Valeurs"
+    },
+    "mission": {
+      "title": "Notre Mission",
+      "description": "Rendre l'assurance cargo simple, rapide et juste. Chaque expéditeur doit savoir exactement ce qui est couvert et être payé rapidement lorsque quelque chose ne va pas. Pas de jargon, pas de faux-fuyants."
+    },
+    "vision": {
+      "title": "Notre Vision",
+      "description": "Un monde où la couverture cargo est aussi standard que les étiquettes d'expédition. Où une petite entreprise à Douala a le même accès à la protection qu'une multinationale à Rotterdam. Nous construisons l'infrastructure pour y parvenir."
+    },
+    "values": {
+      "trust": {
+        "title": "Confiance & Fiabilité",
+        "description": "Nous faisons ce que nous disons. Conditions claires, pas de surprises au moment du sinistre."
+      },
+      "innovation": {
+        "title": "Innovation Pratique",
+        "description": "Devis et sinistres digitaux pour moins de paperasse."
+      },
+      "customer": {
+        "title": "Client d'Abord",
+        "description": "Couverture construite autour de vos routes, pas une police unique."
+      },
+      "global": {
+        "title": "Portée Mondiale",
+        "description": "Couverture fonctionnant sur les principales routes commerciales et ports du monde."
+      }
+    },
+    "howWeOperate": {
+      "title": "Comment Nous Opérons",
+      "subtitle": "Quatre engagements qui façonnent chaque police que nous écrivons.",
+      "pillar1": {
+        "title": "Soutien Noté A+",
+        "description": "Polices souscrites par les principaux assureurs mondiaux avec des notations de solvabilité solides."
+      },
+      "pillar2": {
+        "title": "Conformité Réglementaire",
+        "description": "Nous gérons les règles maritimes, aériennes et transfrontalières pour que votre cargo reste conforme."
+      },
+      "pillar3": {
+        "title": "Règlements Rapides",
+        "description": "Infrastructure sinistres digitale. La plupart des sinistres valides payés dans les 48 heures après documentation."
+      },
+      "pillar4": {
+        "title": "Souscription Intelligente",
+        "description": "Modèles de risque ajustés aux routes, navires et types de cargo spécifiques pour des primes justes."
+      }
+    },
+    "team": {
+      "title": "Construit par des gens qui comprennent le commerce",
+      "subtitle": "Notre équipe combine expertise en assurance et expérience logistique réelle. Nous connaissons la pression de déplacer du cargo à temps et le coût des retards quand la couverture n'est pas claire.",
+      "item1": "Gestionnaires de compte dédiés",
+      "item2": "Agents sinistres qui répondent",
+      "item3": "Souscripteurs axés sur le risque cargo",
+      "item4": "Connaissance locale des principales routes commerciales"
+    },
+    "cta": {
+      "title": "Prêt à travailler avec nous ?",
+      "subtitle": "Parlez à un spécialiste de l'assurance cargo de vos routes et profil de risque. Réponses claires, sans pression.",
+      "cta1": "Nous Contacter",
+      "cta2": "Voir les Services"
+    }
+  },
+  "Contact": {
+    "hero": {
+      "title": "Contactez-Nous",
+      "subtitle": "Questions sur l'assurance cargo ? Notre équipe est là pour vous aider."
+    },
+    "info": {
+      "headquarters": "Siège Social",
+      "address": "4 Étage, Bonaberi, Douala, Cameroun",
+      "phone": "Téléphone",
+      "phoneNumber": "+237 677 77 77 77",
+      "email": "Email",
+      "emailAddress": "support@kovasure.com",
+      "hours": "Heures d'Ouverture",
+      "hoursText": "Lun - Ven, 9h00 - 18h00 GMT",
+      "responseTime": "Nous répondons généralement sous 24 heures les jours ouvrables."
+    },
+    "form": {
+      "title": "Envoyez-Nous un Message",
+      "subtitle": "Remplissez le formulaire et nous vous répondrons bientôt.",
+      "name": "Nom Complet",
+      "namePlaceholder": "Jean Dupont",
+      "email": "Email",
+      "emailPlaceholder": "jean@entreprise.com",
+      "phone": "Téléphone",
+      "phonePlaceholder": "+237 6 77 77 77 77",
+      "company": "Entreprise",
+      "companyPlaceholder": "Votre Entreprise Ltd",
+      "subject": "Sujet",
+      "subjectQuote": "Demander un Devis",
+      "subjectClaim": "Support Sinistres",
+      "subjectCoverage": "Demande de Couverture",
+      "subjectSupport": "Support Général",
+      "subjectPartnership": "Partenariat",
+      "message": "Message",
+      "messagePlaceholder": "Parlez-nous de votre cargo, itinéraire et ce qui doit être couvert...",
+      "submit": "Envoyer le Message",
+      "submitting": "Envoi en cours...",
+      "successTitle": "Message Envoyé avec Succès",
+      "successMessage": "Nous avons reçu votre message et répondrons sous peu.",
+      "sendAnother": "Envoyer un Autre Message",
+      "required": "*"
+    }
+  },
   "Services": {
     "hero": {
       "title1": "Une assurance pour",
